@@ -1,0 +1,173 @@
+/**
+ * ToolNest - Responsive Design & Breakpoints
+ * Optimized for 320px, 375px, 414px, 768px, 1024px, 1366px, 1920px
+ * Guarantees zero horizontal overflow on all screen sizes.
+ */
+
+/* -------------------------------------------------------------------------- */
+/*  Desktop & Large Screens (> 1024px)                                        */
+/* -------------------------------------------------------------------------- */
+@media (min-width: 1025px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Medium Screens & Tablets (<= 1024px)                                      */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    grid-column: span 3;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Small Tablets & Large Phones (<= 768px)                                   */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 2.75rem 0;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+  }
+
+  .tool-page-title {
+    font-size: 1.85rem;
+  }
+
+  .tool-workspace-card {
+    padding: 1.25rem;
+  }
+
+  .dropzone {
+    padding: 2rem 1rem;
+  }
+
+  .dropzone-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+  }
+
+  .dropzone-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .controls-panel {
+    padding: 1rem;
+  }
+
+  .controls-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .controls-actions .btn {
+    width: 100%;
+  }
+
+  .preview-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Phones (<= 480px: 320px, 375px, 414px)                                    */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.925rem;
+  }
+
+  .tool-search-input {
+    font-size: 0.95rem;
+    padding: 0.75rem 0.95rem 0.75rem 2.85rem;
+  }
+
+  .search-input-icon {
+    left: 0.9rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .result-stats-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .btn {
+    min-height: 44px; /* Accessible touch target */
+  }
+}

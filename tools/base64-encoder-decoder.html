@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base64 Encoder & Decoder Online – Free UTF-8 Base64 Tool | ToolNest</title>
+  <meta name="description" content="Encode and decode text to and from Base64 online for free. Full Unicode and UTF-8 support handles emojis and special characters cleanly. 100% private.">
+  <link rel="canonical" href="https://YOUR-DOMAIN.example/tools/base64-encoder-decoder.html">
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+
+  <meta property="og:title" content="Base64 Encoder & Decoder Online – Free UTF-8 Base64 Tool | ToolNest">
+  <meta property="og:description" content="Encode and decode text to and from Base64 with full UTF-8 Unicode support.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.example/tools/base64-encoder-decoder.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <!-- Theme early-init to prevent white flash / FOUC -->
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('toolnest_theme');
+        var p = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var t = s || (p ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ToolNest Base64 Encoder / Decoder",
+    "url": "https://YOUR-DOMAIN.example/tools/base64-encoder-decoder.html",
+    "description": "Free client-side Base64 encoder and decoder utility with Unicode UTF-8 support.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 16 L24 10 L34 16 L34 32 L24 38 L14 32 Z"/></svg>
+        </span>
+        <span class="brand-text">Tool<span>Nest</span></span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#image-tools">Image Tools</a></li>
+          <li><a href="../index.html#pdf-tools">PDF Tools</a></li>
+          <li><a href="../index.html#text-tools">Text Tools</a></li>
+          <li><a href="../index.html#developer-tools" class="active">Developer Tools</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop"></div>
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#image-tools">Image Tools</a></li>
+      <li><a href="../index.html#pdf-tools">PDF Tools</a></li>
+      <li><a href="../index.html#text-tools">Text Tools</a></li>
+      <li><a href="../index.html#developer-tools">Developer Tools</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <main class="main-content">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> &rsaquo;
+        <a href="../index.html#developer-tools">Developer Tools</a> &rsaquo;
+        <span aria-current="page">Base64 Encoder / Decoder</span>
+      </nav>
+
+      <div class="tool-page-header">
+        <h1 class="tool-page-title">Base64 Encoder / Decoder</h1>
+        <p class="tool-page-desc">
+          Safely convert text to and from Base64 representations. Features full Unicode (UTF-8) support so emojis and non-ASCII characters never cause errors.
+        </p>
+      </div>
+
+      <div class="tool-workspace-card">
+        <div id="error-box" style="display: none; padding: 1rem 1.25rem; background: var(--error-light); border: 1px solid var(--error); border-radius: var(--radius-md); color: var(--error); margin-bottom: 1.25rem; align-items: center; gap: 0.75rem;">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div id="error-msg"></div>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; margin-bottom: 1.25rem;">
+          <button type="button" id="encode-btn" class="btn btn-primary btn-lg">
+            Encode to Base64 &rarr;
+          </button>
+          <button type="button" id="decode-btn" class="btn btn-secondary btn-lg">
+            &larr; Decode from Base64
+          </button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="text-input" class="form-label">Plain Text / Input</label>
+            <textarea id="text-input" class="form-control" style="min-height: 240px; font-family: var(--font-mono); font-size: 0.925rem;" placeholder="Enter plain text or paste Base64 here..."></textarea>
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="text-output" class="form-label">Base64 / Output</label>
+            <textarea id="text-output" class="form-control" style="min-height: 240px; font-family: var(--font-mono); font-size: 0.925rem;" placeholder="Result will appear here..." readonly></textarea>
+          </div>
+        </div>
+
+        <div class="controls-actions" style="margin-top: 1.5rem;">
+          <button type="button" id="copy-btn" class="btn btn-success btn-lg">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            Copy Output
+          </button>
+          <button type="button" id="swap-btn" class="btn btn-secondary">
+            &harr; Swap
+          </button>
+          <button type="button" id="clear-btn" class="btn btn-outline">
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <div class="ad-placeholder" aria-label="Advertisement">
+        Advertisement Space
+      </div>
+
+      <article class="content-article">
+        <h2>About ToolNest Base64 Encoder & Decoder</h2>
+        <p>
+          Base64 is a binary-to-text encoding scheme that translates data into an ASCII string format by translating it into a radix-64 representation. It is routinely used for embedding binary assets (such as SVGs and tiny images) directly into HTML/CSS files, transmitting credentials in HTTP Basic Authentication headers, and storing structured payloads in URL safe formats.
+        </p>
+
+        <h2>Why Unicode UTF-8 Support Matters</h2>
+        <p>
+          Traditional JavaScript <code>window.btoa()</code> throws an unhandled exception (<code>DOMException: The string to be encoded contains characters outside of the Latin1 range</code>) whenever encountering non-Latin alphabets, emojis, or international accents.
+        </p>
+        <p>
+          ToolNest utilizes the modern <code>TextEncoder</code> and <code>TextDecoder</code> web APIs to convert strings into raw byte buffers before encoding. This guarantees seamless, crash-free conversion for any language, symbol, or emoji sequence.
+        </p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Is Base64 a form of encryption?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              No. Base64 is strictly an encoding method, not encryption. Anyone with a Base64 decoder can immediately reconstruct the original text. Never rely on Base64 alone to protect confidential passwords or secret keys.
+            </div>
+          </div>
+        </div>
+
+        <h2>Related Tools</h2>
+        <div id="related-tools-grid" class="tools-grid" data-current-slug="base64-encoder-decoder"></div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <span class="brand-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 16 L24 10 L34 16 L34 32 L24 38 L14 32 Z"/></svg>
+            </span>
+            <span class="brand-text">Tool<span>Nest</span></span>
+          </a>
+          <p>Simple, Fast & Free Online Tools. Clean client-side utilities engineered for privacy and productivity.</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Image Tools</h4>
+          <ul class="footer-links">
+            <li><a href="../tools/image-compressor.html">Image Compressor</a></li>
+            <li><a href="../tools/image-resizer.html">Image Resizer</a></li>
+            <li><a href="../tools/jpg-to-png.html">JPG to PNG</a></li>
+            <li><a href="../tools/png-to-jpg.html">PNG to JPG</a></li>
+            <li><a href="../tools/image-cropper.html">Image Cropper</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">PDF Tools</h4>
+          <ul class="footer-links">
+            <li><a href="../tools/jpg-to-pdf.html">JPG to PDF</a></li>
+            <li><a href="../tools/pdf-to-jpg.html">PDF to JPG</a></li>
+            <li><a href="../tools/pdf-merger.html">PDF Merger</a></li>
+            <li><a href="../tools/pdf-compressor.html">PDF Compressor</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Text & Dev</h4>
+          <ul class="footer-links">
+            <li><a href="../tools/word-counter.html">Word Counter</a></li>
+            <li><a href="../tools/case-converter.html">Case Converter</a></li>
+            <li><a href="../tools/duplicate-line-remover.html">Duplicate Remover</a></li>
+            <li><a href="../tools/json-formatter.html">JSON Formatter</a></li>
+            <li><a href="../tools/base64-encoder-decoder.html">Base64 Encoder</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Company & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms & Conditions</a></li>
+            <li><a href="../disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year"></span> ToolNest. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="../privacy-policy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/tools.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/analytics.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/tools/base64.js"></script>
+</body>
+</html>

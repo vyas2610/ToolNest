@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToolNest – Simple, Fast & Free Online Tools</title>
+  <meta name="description" content="ToolNest provides simple, fast, and privacy-focused free online tools for images, PDFs, text, and developers. Process files directly in your browser with zero uploads.">
+  <link rel="canonical" href="https://YOUR-DOMAIN.example/">
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="ToolNest – Simple, Fast & Free Online Tools">
+  <meta property="og:description" content="Free, fast, and private online tools for images, PDFs, text formatting, and developer workflows.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.example/">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <!-- Theme early-init to prevent white flash / FOUC -->
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('toolnest_theme');
+        var p = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var t = s || (p ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Structured Data (WebSite & FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "ToolNest",
+        "url": "https://YOUR-DOMAIN.example/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://YOUR-DOMAIN.example/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are ToolNest tools free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All utilities on ToolNest are 100% free to use with no hidden fees, subscriptions, or credit card requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to create an account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No account registration or login is required. You can use every tool immediately upon opening the page."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are uploaded files stored on your servers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All file processing happens locally on your computer or phone using client-side JavaScript, Canvas, and Web APIs. Your files are never uploaded to any remote server."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use ToolNest on mobile devices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ToolNest is fully responsive and optimized for touchscreens on smartphones and tablets."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 16 L24 10 L34 16 L34 32 L24 38 L14 32 Z"/></svg>
+        </span>
+        <span class="brand-text">Tool<span>Nest</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#image-tools">Image Tools</a></li>
+          <li><a href="#pdf-tools">PDF Tools</a></li>
+          <li><a href="#text-tools">Text Tools</a></li>
+          <li><a href="#developer-tools">Developer Tools</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-backdrop"></div>
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#image-tools">Image Tools</a></li>
+      <li><a href="#pdf-tools">PDF Tools</a></li>
+      <li><a href="#text-tools">Text Tools</a></li>
+      <li><a href="#developer-tools">Developer Tools</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-tagline">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+          100% Client-Side &bull; No Server Uploads
+        </div>
+        <h1 class="hero-title">Free Online Tools for Everyday Tasks</h1>
+        <p class="hero-subtitle">
+          Simple, fast and privacy-focused tools that help you get things done directly in your browser.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="search-wrapper">
+          <div class="search-input-box">
+            <svg class="search-input-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" class="tool-search-input" placeholder="Search for a tool (e.g. Image Compressor, PDF Merger, JSON Formatter)..." autocomplete="off">
+          </div>
+          <!-- Dropdown search results populated via search.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Tools Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Popular Tools</h2>
+          <p class="section-subtitle">Our most frequently used utilities for quick conversions and formatting.</p>
+        </div>
+        <div id="popular-tools-grid" class="tools-grid">
+          <!-- Dynamically populated from tools.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad Placeholder 1 -->
+    <div class="container">
+      <div class="ad-placeholder" aria-label="Advertisement">
+        Advertisement Space
+      </div>
+    </div>
+
+    <!-- Category 1: Image Tools -->
+    <section id="image-tools" class="section" style="background-color: var(--bg-tertiary);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Image Tools</h2>
+          <p class="section-subtitle">Compress, resize, crop, and convert images directly inside your browser.</p>
+        </div>
+        <div class="category-tools-grid tools-grid" data-category="image-tools">
+          <!-- Dynamically populated from tools.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 2: PDF Tools -->
+    <section id="pdf-tools" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">PDF Tools</h2>
+          <p class="section-subtitle">Merge PDFs, convert images to PDF, extract pages, and optimize streams locally.</p>
+        </div>
+        <div class="category-tools-grid tools-grid" data-category="pdf-tools">
+          <!-- Dynamically populated from tools.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 3: Text Tools -->
+    <section id="text-tools" class="section" style="background-color: var(--bg-tertiary);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Text Tools</h2>
+          <p class="section-subtitle">Clean text, count characters and words, and transform casing instantly.</p>
+        </div>
+        <div class="category-tools-grid tools-grid" data-category="text-tools">
+          <!-- Dynamically populated from tools.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 4: Developer Tools -->
+    <section id="developer-tools" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Developer Tools</h2>
+          <p class="section-subtitle">Essential formatters and encoders designed for clean web development.</p>
+        </div>
+        <div class="category-tools-grid tools-grid" data-category="developer-tools">
+          <!-- Dynamically populated from tools.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Why ToolNest? Section -->
+    <section class="section" style="background-color: var(--bg-tertiary);">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Why use ToolNest?</h2>
+          <p class="section-subtitle">Designed for speed, ease of use, and verified data privacy.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="feature-title">Free to Use</h3>
+            <p class="feature-text">Every tool is free forever with no hidden paywalls, subscriptions, or credit card demands.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+            </div>
+            <h3 class="feature-title">No Registration Required</h3>
+            <p class="feature-text">Get straight to work. No accounts to create, no verification emails to wait for, and no passwords to remember.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="feature-title">Fast Processing</h3>
+            <p class="feature-text">Zero waiting for slow server queues. Operations run immediately using your browser's local processing engine.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 class="feature-title">Privacy Focused</h3>
+            <p class="feature-text">Your private files, images, PDFs, and text stay right on your device. Nothing is stored on remote servers.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3 class="feature-title">Mobile Friendly</h3>
+            <p class="feature-text">Fully responsive interfaces built from the ground up to feel natural on phones, tablets, and desktops alike.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 class="feature-title">Easy to Use</h3>
+            <p class="feature-text">Clean, clutter-free layouts with intuitive controls, drag-and-drop file inputs, and instant downloads.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">Get your tasks done in three straightforward steps.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Choose a Tool</h3>
+            <p class="step-desc">Select the exact utility you need from our categorized directory or instant search bar.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Upload or Enter Data</h3>
+            <p class="step-desc">Drag and drop your file or paste your text. Adjust the intuitive sliders and configuration options.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Download or Copy</h3>
+            <p class="step-desc">Get your converted image, merged PDF, or formatted code instantly with a single click.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background-color: var(--bg-tertiary);">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about ToolNest and how our tools operate.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Are ToolNest tools free?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Yes, 100% free. There are no limits, trial periods, subscription fees, or account registrations.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Do I need to create an account?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              No. You never need to provide an email or sign up. All utilities work immediately on your device upon opening the page.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Are uploaded files stored?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              No files are ever stored on any server. ToolNest runs entirely in your browser using client-side JavaScript, Web APIs, and HTML5 Canvas. Your files never travel across the internet.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can I use ToolNest on mobile?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Yes! ToolNest is designed mobile-first and works smoothly across Safari on iOS, Chrome on Android, and all modern mobile web browsers.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Do the tools work in modern browsers?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Yes. ToolNest works in all modern standards-compliant web browsers including Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge, and Opera.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Is my data sent to a server?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              No. All operations (image compression, case conversions, PDF concatenation, JSON validation, etc.) happen strictly on your device using client-side computing power.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="brand-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 16 L24 10 L34 16 L34 32 L24 38 L14 32 Z"/></svg>
+            </span>
+            <span class="brand-text">Tool<span>Nest</span></span>
+          </a>
+          <p>Simple, Fast & Free Online Tools. High performance client-side utilities engineered for privacy and productivity.</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Image Tools</h4>
+          <ul class="footer-links">
+            <li><a href="tools/image-compressor.html">Image Compressor</a></li>
+            <li><a href="tools/image-resizer.html">Image Resizer</a></li>
+            <li><a href="tools/jpg-to-png.html">JPG to PNG</a></li>
+            <li><a href="tools/png-to-jpg.html">PNG to JPG</a></li>
+            <li><a href="tools/image-cropper.html">Image Cropper</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">PDF Tools</h4>
+          <ul class="footer-links">
+            <li><a href="tools/jpg-to-pdf.html">JPG to PDF</a></li>
+            <li><a href="tools/pdf-to-jpg.html">PDF to JPG</a></li>
+            <li><a href="tools/pdf-merger.html">PDF Merger</a></li>
+            <li><a href="tools/pdf-compressor.html">PDF Compressor</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Text & Dev</h4>
+          <ul class="footer-links">
+            <li><a href="tools/word-counter.html">Word Counter</a></li>
+            <li><a href="tools/case-converter.html">Case Converter</a></li>
+            <li><a href="tools/duplicate-line-remover.html">Duplicate Remover</a></li>
+            <li><a href="tools/json-formatter.html">JSON Formatter</a></li>
+            <li><a href="tools/base64-encoder-decoder.html">Base64 Encoder</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Company & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year"></span> ToolNest. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

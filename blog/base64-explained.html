@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is Base64 Encoding and How Does It Work? | ToolNest Blog</title>
+  <meta name="description" content="A comprehensive explanation of Base64 encoding: binary-to-text representation, data URIs, Unicode UTF-8 handling, and real-world developer use cases.">
+  <link rel="canonical" href="https://YOUR-DOMAIN.example/blog/base64-explained.html">
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+
+  <meta property="og:title" content="What Is Base64 Encoding and How Does It Work? | ToolNest">
+  <meta property="og:description" content="Understand the mathematics, mechanics, and best practices of Base64 encoding.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.example/blog/base64-explained.html">
+  <meta property="og:type" content="article">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <!-- Theme early-init to prevent white flash / FOUC -->
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('toolnest_theme');
+        var p = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var t = s || (p ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is Base64 Encoding and How Does It Work?",
+    "description": "A comprehensive explanation of Base64 encoding and real-world developer use cases.",
+    "author": {
+      "@type": "Organization",
+      "name": "ToolNest"
+    },
+    "datePublished": "2026-09-08"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 16 L24 10 L34 16 L34 32 L24 38 L14 32 Z"/></svg>
+        </span>
+        <span class="brand-text">Tool<span>Nest</span></span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#image-tools">Image Tools</a></li>
+          <li><a href="../index.html#pdf-tools">PDF Tools</a></li>
+          <li><a href="../index.html#text-tools">Text Tools</a></li>
+          <li><a href="../index.html#developer-tools">Developer Tools</a></li>
+          <li><a href="../blog/index.html" class="active">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container container-sm">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> &rsaquo;
+        <a href="../blog/index.html">Blog</a> &rsaquo;
+        <span aria-current="page">Base64 Explained</span>
+      </nav>
+
+      <div class="tool-page-header">
+        <h1 class="tool-page-title">What Is Base64 Encoding and How Does It Work?</h1>
+        <p class="tool-page-desc">Published September 2026 &bull; 5 min read &bull; Data Encoding</p>
+      </div>
+
+      <article class="content-article">
+        <p>
+          In computer science and web development, communication protocols such as SMTP (email) and HTTP were historically designed to transmit printable 7-bit ASCII text. When engineers needed to send binary assets (such as images, compiled files, or encryption keys) through channels expecting text, they turned to <strong>Base64</strong>.
+        </p>
+
+        <h2>How Base64 Works (The Math)</h2>
+        <p>
+          Base64 takes binary data and translates every 3 bytes (24 bits) into 4 printable characters chosen from a 64-symbol alphabet (A-Z, a-z, 0-9, +, /):
+        </p>
+        <ol>
+          <li>Take 3 bytes of binary data (24 bits total).</li>
+          <li>Split those 24 bits into 4 groups of 6 bits each ($2^6 = 64$ combinations).</li>
+          <li>Map each 6-bit integer to its corresponding character in the Base64 alphabet.</li>
+          <li>If the final chunk contains fewer than 3 bytes, pad the end with <code>=</code> characters.</li>
+        </ol>
+        <p>
+          Because every 3 bytes become 4 characters, <strong>Base64 increases payload size by approximately 33%</strong>.
+        </p>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+          <li><strong>Data URLs:</strong> Embedding small SVGs or icons directly into CSS stylesheets or HTML <code>&lt;img src="data:image/png;base64,..."&gt;</code> tags to eliminate additional HTTP requests.</li>
+          <li><strong>Authentication Tokens:</strong> Encoding client credentials in HTTP <code>Authorization: Basic ...</code> headers.</li>
+          <li><strong>Webhook Payloads:</strong> Transmitting binary signatures and cryptographic hashes safely in JSON structures.</li>
+        </ul>
+
+        <h2>Unicode & Emoji Safety</h2>
+        <p>
+          In JavaScript, calling <code>btoa()</code> directly on strings with non-ASCII characters or emojis crashes with an exception. ToolNest’s <a href="../tools/base64-encoder-decoder.html">Base64 Encoder / Decoder</a> solves this by preprocessing strings through the <code>TextEncoder</code> interface, ensuring clean UTF-8 byte conversions every time.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>&copy; <span class="current-year"></span> ToolNest. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="../privacy-policy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/tools.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/analytics.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

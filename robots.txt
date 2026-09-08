@@ -1,0 +1,6 @@
+# robots.txt for ToolNest
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://YOUR-DOMAIN.example/sitemap.xml
