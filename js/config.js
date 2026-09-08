@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ToolNest - Central Website Configuration
  * 
  * Update these settings to customize your brand, analytics, search verification,
@@ -18,8 +18,7 @@ const CONFIG = {
   GA4_MEASUREMENT_ID: "G-XXXXXXXXXX",
 
   // Google Search Console Verification
-  // Replace YOUR_VERIFICATION_CODE with the code provided by Google Search Console.
-  GOOGLE_SITE_VERIFICATION: "YOUR_VERIFICATION_CODE",
+  GOOGLE_SITE_VERIFICATION: "cPCH5styxL8S16xRxPTRPbldtWIqnxGxp9fj9ZMoRno",
 
   // Google AdSense
   // Replace ca-pub-XXXXXXXXXXXXXXXX with your approved AdSense Publisher ID.
