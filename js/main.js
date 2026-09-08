@@ -71,27 +71,67 @@ function initMobileMenu() {
 
   if (!menuBtn || !navDrawer) return;
 
+  // Insert drawer header with brand & explicit Close button if not already present
+  if (!navDrawer.querySelector(".mobile-drawer-header")) {
+    const drawerHeader = document.createElement("div");
+    drawerHeader.className = "mobile-drawer-header";
+    drawerHeader.innerHTML = `
+      <div class="mobile-drawer-brand">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 16 L24 10 L34 16 L34 32 L24 38 L14 32 Z"/></svg>
+        </span>
+        <span class="brand-text">Tool<span>Nest</span></span>
+      </div>
+      <button type="button" class="mobile-drawer-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    `;
+    navDrawer.insertBefore(drawerHeader, navDrawer.firstChild);
+
+    const closeBtn = drawerHeader.querySelector(".mobile-drawer-close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => toggleMenu(false));
+    }
+  }
+
+  function updateMenuIcon(isOpen) {
+    menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    menuBtn.innerHTML = isOpen
+      ? `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
+      : `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`;
+  }
+
   function toggleMenu(isOpen) {
     const open = typeof isOpen === "boolean" ? isOpen : !navDrawer.classList.contains("active");
     navDrawer.classList.toggle("active", open);
     if (backdrop) backdrop.classList.toggle("active", open);
-    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    document.body.style.overflow = open ? "hidden" : "";
+    updateMenuIcon(open);
+
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
   }
 
-  menuBtn.addEventListener("click", () => toggleMenu());
-  if (backdrop) backdrop.addEventListener("click", () => toggleMenu(false));
+  window.closeMobileMenu = () => toggleMenu(false);
+
+  menuBtn.addEventListener("click", e => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  if (backdrop) {
+    backdrop.addEventListener("click", () => toggleMenu(false));
+  }
 
   // Close on Escape
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && navDrawer.classList.contains("active")) {
       toggleMenu(false);
     }
-  });
-
-  // Close when clicking any nav link in mobile drawer
-  navDrawer.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => toggleMenu(false));
   });
 }
 
@@ -261,6 +301,17 @@ function initNavigation() {
     });
   }
 
+  function smoothScrollToTarget(targetEl) {
+    if (!targetEl) return;
+    const header = document.querySelector(".site-header");
+    const headerHeight = header ? header.offsetHeight : 70;
+    const targetY = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
+    window.scrollTo({
+      top: Math.max(0, targetY),
+      behavior: "smooth"
+    });
+  }
+
   // Bind click handlers to all navigation links
   navLinks.forEach(link => {
     link.addEventListener("click", e => {
@@ -268,8 +319,13 @@ function initNavigation() {
       const href = (link.getAttribute("href") || "").trim();
       if (!href) return;
 
+      const isMobileLink = Boolean(link.closest(".mobile-nav-drawer"));
       const hasHash = href.includes("#");
       const hash = hasHash ? "#" + href.split("#")[1] : "";
+
+      if (isMobileLink && typeof window.closeMobileMenu === "function") {
+        window.closeMobileMenu();
+      }
 
       // 1. In-page section anchor clicked on homepage
       if (hasHash && isHomePage) {
@@ -279,11 +335,22 @@ function initNavigation() {
           setActiveLink(hash);
           setManualNavLock();
 
-          targetEl.scrollIntoView({ behavior: "smooth" });
-          if (window.history.pushState) {
-            window.history.pushState(null, "", hash);
+          if (isMobileLink) {
+            setTimeout(() => {
+              smoothScrollToTarget(targetEl);
+              if (window.history.pushState) {
+                window.history.pushState(null, "", hash);
+              } else {
+                window.location.hash = hash;
+              }
+            }, 120);
           } else {
-            window.location.hash = hash;
+            smoothScrollToTarget(targetEl);
+            if (window.history.pushState) {
+              window.history.pushState(null, "", hash);
+            } else {
+              window.location.hash = hash;
+            }
           }
           return;
         }
@@ -295,9 +362,18 @@ function initNavigation() {
         setActiveLink("home");
         setManualNavLock();
 
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        if (window.history.pushState) {
-          window.history.pushState(null, "", window.location.pathname);
+        if (isMobileLink) {
+          setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            if (window.history.pushState) {
+              window.history.pushState(null, "", window.location.pathname);
+            }
+          }, 120);
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          if (window.history.pushState) {
+            window.history.pushState(null, "", window.location.pathname);
+          }
         }
         return;
       }
