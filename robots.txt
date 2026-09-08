@@ -1,6 +1,6 @@
-# robots.txt for ToolNest
+﻿# robots.txt for ToolNest
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://YOUR-DOMAIN.example/sitemap.xml
+Sitemap: https://toolnestonline.netlify.app/sitemap.xml

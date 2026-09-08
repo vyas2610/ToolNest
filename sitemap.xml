@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Site Pages -->
   <url>
-    <loc>https://YOUR-DOMAIN.example/</loc>
+    <loc>https://toolnestonline.netlify.app/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/about.html</loc>
+    <loc>https://toolnestonline.netlify.app/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/contact.html</loc>
+    <loc>https://toolnestonline.netlify.app/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/privacy-policy.html</loc>
+    <loc>https://toolnestonline.netlify.app/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/terms.html</loc>
+    <loc>https://toolnestonline.netlify.app/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/disclaimer.html</loc>
+    <loc>https://toolnestonline.netlify.app/disclaimer.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -35,140 +35,140 @@
   <!-- 15 Tools -->
   <!-- Image Tools -->
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/image-compressor.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/image-compressor.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/image-resizer.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/image-resizer.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/jpg-to-png.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/jpg-to-png.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/png-to-jpg.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/png-to-jpg.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/image-cropper.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/image-cropper.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- PDF Tools -->
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/jpg-to-pdf.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/jpg-to-pdf.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/pdf-to-jpg.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/pdf-to-jpg.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/pdf-merger.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/pdf-merger.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/pdf-compressor.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/pdf-compressor.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Text Tools -->
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/word-counter.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/word-counter.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/case-converter.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/case-converter.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/duplicate-line-remover.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/duplicate-line-remover.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Developer Tools -->
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/json-formatter.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/json-formatter.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/base64-encoder-decoder.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/base64-encoder-decoder.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/tools/url-encoder-decoder.html</loc>
+    <loc>https://toolnestonline.netlify.app/tools/url-encoder-decoder.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Blog Hub and Articles -->
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/</loc>
+    <loc>https://toolnestonline.netlify.app/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/image-compression-guide.html</loc>
+    <loc>https://toolnestonline.netlify.app/blog/image-compression-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/jpg-vs-png-vs-webp.html</loc>
+    <loc>https://toolnestonline.netlify.app/blog/jpg-vs-png-vs-webp.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/reduce-image-file-size.html</loc>
+    <loc>https://toolnestonline.netlify.app/blog/reduce-image-file-size.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/jpg-to-pdf-guide.html</loc>
+    <loc>https://toolnestonline.netlify.app/blog/jpg-to-pdf-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/resize-images-social-media.html</loc>
+    <loc>https://toolnestonline.netlify.app/blog/resize-images-social-media.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/reduce-pdf-size.html</loc>
+    <loc>https://toolnestonline.netlify.app/blog/reduce-pdf-size.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/json-formatting-guide.html</loc>
+    <loc>https://toolnestonline.netlify.app/blog/json-formatting-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/base64-explained.html</loc>
+    <loc>https://toolnestonline.netlify.app/blog/base64-explained.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/remove-duplicate-lines.html</loc>
+    <loc>https://toolnestonline.netlify.app/blog/remove-duplicate-lines.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.example/blog/best-image-formats.html</loc>
+    <loc>https://toolnestonline.netlify.app/blog/best-image-formats.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

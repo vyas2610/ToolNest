@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ToolNest - Central Website Configuration
  * 
  * Update these settings to customize your brand, analytics, search verification,
@@ -9,7 +9,7 @@ const CONFIG = {
   // Brand Configuration
   SITE_NAME: "ToolNest",
   TAGLINE: "Simple, Fast & Free Online Tools",
-  SITE_URL: "https://YOUR-DOMAIN.example",
+  SITE_URL: "https://toolnestonline.netlify.app",
   CONTACT_EMAIL: "deepakvyas261092@gmail.com",
 
   // Google Analytics 4
