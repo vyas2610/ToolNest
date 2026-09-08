@@ -57,6 +57,12 @@ try {
             $filePath = [System.IO.Path]::Combine($Directory, $relPath)
             
             if ([System.IO.Directory]::Exists($filePath)) {
+                if (-not $req.Url.AbsolutePath.EndsWith("/")) {
+                    $res.StatusCode = 301
+                    $res.RedirectLocation = $req.Url.AbsolutePath + "/"
+                    $res.Close()
+                    continue
+                }
                 $filePath = [System.IO.Path]::Combine($filePath, "index.html")
             }
             

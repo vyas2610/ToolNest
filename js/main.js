@@ -66,10 +66,35 @@ function setTheme(theme) {
 /* -------------------------------------------------------------------------- */
 function initMobileMenu() {
   const menuBtn = document.querySelector(".mobile-menu-toggle");
-  const navDrawer = document.querySelector(".mobile-nav-drawer");
-  const backdrop = document.querySelector(".mobile-nav-backdrop");
+  if (!menuBtn) return;
 
-  if (!menuBtn || !navDrawer) return;
+  let navDrawer = document.querySelector(".mobile-nav-drawer");
+  let backdrop = document.querySelector(".mobile-nav-backdrop");
+
+  // If a subpage lacks mobile-nav-drawer or backdrop in HTML, generate it automatically from .nav-links
+  if (!navDrawer) {
+    const desktopNav = document.querySelector(".nav-links");
+    if (desktopNav) {
+      if (!backdrop) {
+        backdrop = document.createElement("div");
+        backdrop.className = "mobile-nav-backdrop";
+        document.body.appendChild(backdrop);
+      }
+      navDrawer = document.createElement("div");
+      navDrawer.className = "mobile-nav-drawer";
+      navDrawer.setAttribute("role", "dialog");
+      navDrawer.setAttribute("aria-modal", "true");
+      navDrawer.setAttribute("aria-label", "Mobile Navigation");
+
+      const ul = document.createElement("ul");
+      ul.className = "mobile-links";
+      ul.innerHTML = desktopNav.innerHTML;
+      navDrawer.appendChild(ul);
+      document.body.appendChild(navDrawer);
+    }
+  }
+
+  if (!navDrawer) return;
 
   // Insert drawer header with brand & explicit Close button if not already present
   if (!navDrawer.querySelector(".mobile-drawer-header")) {
@@ -238,18 +263,54 @@ function initNavigation() {
   const navLinks = document.querySelectorAll(".nav-links a, .mobile-links a, .mobile-nav-drawer a");
   if (!navLinks.length) return;
 
-  const pathname = window.location.pathname.toLowerCase();
+  const fullUrl = (window.location.href || "").toLowerCase();
+  const rawPath = (window.location.pathname || "").toLowerCase().replace(/\\/g, "/");
 
-  // Strictly identify if we are on the homepage
+  // Robust detection of current page type across local, Netlify, and file protocols
+  const isBlog =
+    rawPath.includes("/blog") ||
+    rawPath.includes("blog/") ||
+    rawPath.endsWith("/blog") ||
+    rawPath.endsWith("blog") ||
+    fullUrl.includes("/blog/") ||
+    fullUrl.includes("/blog") ||
+    Boolean(document.querySelector(".blog-grid, .blog-card, article.content-article")) ||
+    (document.title && document.title.toLowerCase().includes("blog"));
+
+  const isAbout =
+    rawPath.includes("about.html") ||
+    rawPath.includes("/about") ||
+    fullUrl.includes("about.html");
+
+  const isContact =
+    rawPath.includes("contact.html") ||
+    rawPath.includes("/contact") ||
+    fullUrl.includes("contact.html");
+
+  const isTools =
+    rawPath.includes("/tools/") ||
+    rawPath.includes("tools/") ||
+    fullUrl.includes("/tools/");
+
+  const isLegalOr404 =
+    rawPath.includes("privacy-policy") ||
+    rawPath.includes("terms") ||
+    rawPath.includes("disclaimer") ||
+    rawPath.includes("404");
+
+  const hasHomepageHero = Boolean(document.querySelector(".hero, #popular-tools-grid"));
+  const hasBreadcrumbs = Boolean(document.querySelector(".breadcrumbs"));
+
+  // Strictly identify if we are on the homepage:
+  // Must NOT be a subpage, must NOT have breadcrumbs, and must have hero/popular grid
   const isHomePage =
-    !pathname.includes("/blog") &&
-    !pathname.includes("/tools") &&
-    !pathname.includes("/about") &&
-    !pathname.includes("/contact") &&
-    !pathname.includes("/privacy") &&
-    !pathname.includes("/terms") &&
-    !pathname.includes("/disclaimer") &&
-    !pathname.includes("/404");
+    !isBlog &&
+    !isAbout &&
+    !isContact &&
+    !isTools &&
+    !isLegalOr404 &&
+    !hasBreadcrumbs &&
+    hasHomepageHero;
 
   let isManualNav = false;
   let manualNavTimer = null;
@@ -271,7 +332,7 @@ function initNavigation() {
 
     navLinks.forEach(link => {
       const text = (link.textContent || "").trim().toLowerCase();
-      const href = (link.getAttribute("href") || "").toLowerCase();
+      const href = (link.getAttribute("href") || "").toLowerCase().replace(/\\/g, "/");
 
       let isMatch = false;
 
@@ -286,7 +347,11 @@ function initNavigation() {
       } else if (key === "developer-tools" || key === "developer tools") {
         isMatch = (text === "developer tools" || href.includes("#developer-tools"));
       } else if (key === "blog") {
-        isMatch = (text === "blog" || href.includes("/blog") || href.endsWith("blog/index.html"));
+        isMatch = (
+          text === "blog" ||
+          href.includes("blog") ||
+          (isBlog && (href === "index.html" || href === "./" || href === ""))
+        );
       } else if (key === "about") {
         isMatch = (text === "about" || href.includes("about.html"));
       } else if (key === "contact") {
@@ -402,20 +467,20 @@ function initNavigation() {
   }
 
   // Set initial active state based on current page URL
-  if (pathname.includes("/blog")) {
+  if (isBlog) {
     setActiveLink("blog");
-  } else if (pathname.includes("/about")) {
+  } else if (isAbout) {
     setActiveLink("about");
-  } else if (pathname.includes("/contact")) {
+  } else if (isContact) {
     setActiveLink("contact");
-  } else if (pathname.includes("/tools/")) {
-    if (/image|jpg-to-png|png-to-jpg|crop|resize|compress/i.test(pathname) && !/pdf/i.test(pathname)) {
+  } else if (isTools) {
+    if (/image|jpg-to-png|png-to-jpg|crop|resize|compress/i.test(rawPath) && !/pdf/i.test(rawPath)) {
       setActiveLink("image-tools");
-    } else if (/pdf/i.test(pathname)) {
+    } else if (/pdf/i.test(rawPath)) {
       setActiveLink("pdf-tools");
-    } else if (/word|case|duplicate/i.test(pathname)) {
+    } else if (/word|case|duplicate/i.test(rawPath)) {
       setActiveLink("text-tools");
-    } else if (/json|base64|url/i.test(pathname)) {
+    } else if (/json|base64|url/i.test(rawPath)) {
       setActiveLink("developer-tools");
     }
   } else if (isHomePage) {
