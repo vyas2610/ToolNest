@@ -198,12 +198,18 @@ function initNavigation() {
   const navLinks = document.querySelectorAll(".nav-links a, .mobile-links a, .mobile-nav-drawer a");
   if (!navLinks.length) return;
 
-  const currentPath = window.location.pathname.replace(/\/index\.html$/, "/");
+  const pathname = window.location.pathname.toLowerCase();
+
+  // Strictly identify if we are on the homepage
   const isHomePage =
-    currentPath === "/" ||
-    currentPath === "" ||
-    currentPath.endsWith("/index.html") ||
-    currentPath.endsWith("/");
+    !pathname.includes("/blog") &&
+    !pathname.includes("/tools") &&
+    !pathname.includes("/about") &&
+    !pathname.includes("/contact") &&
+    !pathname.includes("/privacy") &&
+    !pathname.includes("/terms") &&
+    !pathname.includes("/disclaimer") &&
+    !pathname.includes("/404");
 
   let isManualNav = false;
   let manualNavTimer = null;
@@ -220,42 +226,33 @@ function initNavigation() {
   function setActiveLink(identifier) {
     if (!identifier) return;
 
+    const key = identifier.toLowerCase().replace(/^#/, "").trim();
     navLinks.forEach(link => link.classList.remove("active"));
 
     navLinks.forEach(link => {
-      const href = link.getAttribute("href");
-      if (!href) return;
+      const text = (link.textContent || "").trim().toLowerCase();
+      const href = (link.getAttribute("href") || "").toLowerCase();
 
       let isMatch = false;
 
-      if (identifier.startsWith("#")) {
-        // Match anchor hash (e.g. #image-tools or index.html#image-tools)
-        if (
-          href === identifier ||
-          href.endsWith(identifier) ||
-          href.endsWith("index.html" + identifier)
-        ) {
-          isMatch = true;
-        }
-      } else if (identifier === "home" || identifier === "index.html" || identifier === "/") {
-        // Match Home
-        if (
-          href === "index.html" ||
-          href === "/" ||
-          href === "./" ||
-          href === "../index.html"
-        ) {
-          isMatch = true;
-        }
+      if (key === "home") {
+        isMatch = (text === "home");
+      } else if (key === "image-tools" || key === "image tools") {
+        isMatch = (text === "image tools" || href.includes("#image-tools"));
+      } else if (key === "pdf-tools" || key === "pdf tools") {
+        isMatch = (text === "pdf tools" || href.includes("#pdf-tools"));
+      } else if (key === "text-tools" || key === "text tools") {
+        isMatch = (text === "text tools" || href.includes("#text-tools"));
+      } else if (key === "developer-tools" || key === "developer tools") {
+        isMatch = (text === "developer tools" || href.includes("#developer-tools"));
+      } else if (key === "blog") {
+        isMatch = (text === "blog" || href.includes("/blog") || href.endsWith("blog/index.html"));
+      } else if (key === "about") {
+        isMatch = (text === "about" || href.includes("about.html"));
+      } else if (key === "contact") {
+        isMatch = (text === "contact" || href.includes("contact.html"));
       } else {
-        // Match subpage (e.g. about.html, contact.html, blog/index.html)
-        if (
-          href === identifier ||
-          href.endsWith(identifier) ||
-          identifier.endsWith(href)
-        ) {
-          isMatch = true;
-        }
+        isMatch = (text === key || href.includes(key));
       }
 
       if (isMatch) {
@@ -267,7 +264,8 @@ function initNavigation() {
   // Bind click handlers to all navigation links
   navLinks.forEach(link => {
     link.addEventListener("click", e => {
-      const href = link.getAttribute("href");
+      const text = (link.textContent || "").trim().toLowerCase();
+      const href = (link.getAttribute("href") || "").trim();
       if (!href) return;
 
       const hasHash = href.includes("#");
@@ -292,7 +290,7 @@ function initNavigation() {
       }
 
       // 2. Home clicked while already on homepage
-      if (isHomePage && (href === "index.html" || href === "/" || href === "./")) {
+      if (isHomePage && text === "home") {
         e.preventDefault();
         setActiveLink("home");
         setManualNavLock();
@@ -304,11 +302,11 @@ function initNavigation() {
         return;
       }
 
-      // 3. Other link clicked (navigating to another page)
-      if (hasHash) {
+      // 3. Other link clicked: activate immediately
+      if (text) {
+        setActiveLink(text);
+      } else if (hasHash) {
         setActiveLink(hash);
-      } else {
-        setActiveLink(href);
       }
     });
   });
@@ -327,8 +325,24 @@ function initNavigation() {
     });
   }
 
-  // Set initial active state based on URL hash or page path
-  if (isHomePage) {
+  // Set initial active state based on current page URL
+  if (pathname.includes("/blog")) {
+    setActiveLink("blog");
+  } else if (pathname.includes("/about")) {
+    setActiveLink("about");
+  } else if (pathname.includes("/contact")) {
+    setActiveLink("contact");
+  } else if (pathname.includes("/tools/")) {
+    if (/image|jpg-to-png|png-to-jpg|crop|resize|compress/i.test(pathname) && !/pdf/i.test(pathname)) {
+      setActiveLink("image-tools");
+    } else if (/pdf/i.test(pathname)) {
+      setActiveLink("pdf-tools");
+    } else if (/word|case|duplicate/i.test(pathname)) {
+      setActiveLink("text-tools");
+    } else if (/json|base64|url/i.test(pathname)) {
+      setActiveLink("developer-tools");
+    }
+  } else if (isHomePage) {
     if (window.location.hash && document.querySelector(window.location.hash)) {
       setActiveLink(window.location.hash);
       setTimeout(() => {
@@ -393,10 +407,6 @@ function initNavigation() {
       },
       { passive: true }
     );
-  } else {
-    // Subpage: highlight corresponding nav link
-    const pageName = window.location.pathname.split("/").pop() || "index.html";
-    setActiveLink(pageName);
   }
 
   // Listen for browser back / forward buttons
