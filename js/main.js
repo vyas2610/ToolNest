@@ -318,25 +318,24 @@ function initNavigation() {
   const rawPath = (window.location.pathname || "").toLowerCase().replace(/\\/g, "/");
 
   // Robust detection of current page type across local, Netlify, and file protocols
-  const isBlog =
-    rawPath.includes("/blog") ||
-    rawPath.includes("blog/") ||
-    rawPath.endsWith("/blog") ||
-    rawPath.endsWith("blog") ||
-    fullUrl.includes("/blog/") ||
-    fullUrl.includes("/blog") ||
-    Boolean(document.querySelector(".blog-grid, .blog-card, article.content-article")) ||
-    (document.title && document.title.toLowerCase().includes("blog"));
-
   const isAbout =
     rawPath.includes("about.html") ||
-    rawPath.includes("/about") ||
+    rawPath.endsWith("/about") ||
     fullUrl.includes("about.html");
 
   const isContact =
     rawPath.includes("contact.html") ||
-    rawPath.includes("/contact") ||
+    rawPath.endsWith("/contact") ||
     fullUrl.includes("contact.html");
+
+  const isBlog =
+    !isAbout &&
+    !isContact &&
+    (rawPath.includes("/blog/") ||
+     rawPath.endsWith("/blog") ||
+     rawPath.endsWith("/blog.html") ||
+     fullUrl.includes("/blog/") ||
+     fullUrl.endsWith("/blog"));
 
   const isTools =
     rawPath.includes("/tools/") ||
@@ -349,6 +348,10 @@ function initNavigation() {
     rawPath.includes("disclaimer") ||
     rawPath.includes("404");
 
+  const isRegionHub =
+    /\/(br|de|es|fr|id|jp|mx|ph|ru|vn)(\/|$)/i.test(rawPath) ||
+    /\/(br|de|es|fr|id|jp|mx|ph|ru|vn)(\/|$)/i.test(fullUrl);
+
   const hasHomepageHero = Boolean(document.querySelector(".hero, #popular-tools-grid"));
   const hasBreadcrumbs = Boolean(document.querySelector(".breadcrumbs"));
 
@@ -360,6 +363,7 @@ function initNavigation() {
     !isContact &&
     !isTools &&
     !isLegalOr404 &&
+    !isRegionHub &&
     !hasBreadcrumbs &&
     hasHomepageHero;
 
@@ -400,13 +404,14 @@ function initNavigation() {
       } else if (key === "blog") {
         isMatch = (
           text === "blog" ||
-          href.includes("blog") ||
-          (isBlog && (href === "index.html" || href === "./" || href === ""))
+          href.includes("blog/index.html") ||
+          href.endsWith("/blog/") ||
+          href.endsWith("/blog")
         );
       } else if (key === "about") {
-        isMatch = (text === "about" || href.includes("about.html"));
+        isMatch = (text === "about" || href.includes("about.html") || href.endsWith("/about"));
       } else if (key === "contact") {
-        isMatch = (text === "contact" || href.includes("contact.html"));
+        isMatch = (text === "contact" || href.includes("contact.html") || href.endsWith("/contact"));
       } else {
         isMatch = (text === key || href.includes(key));
       }
@@ -518,12 +523,12 @@ function initNavigation() {
   }
 
   // Set initial active state based on current page URL
-  if (isBlog) {
-    setActiveLink("blog");
-  } else if (isAbout) {
+  if (isAbout) {
     setActiveLink("about");
   } else if (isContact) {
     setActiveLink("contact");
+  } else if (isBlog) {
+    setActiveLink("blog");
   } else if (isTools) {
     if (/image|jpg-to-png|png-to-jpg|crop|resize|compress/i.test(rawPath) && !/pdf/i.test(rawPath)) {
       setActiveLink("image-tools");
