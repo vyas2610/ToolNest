@@ -5,18 +5,18 @@
  */
 
 /* -------------------------------------------------------------------------- */
-/*  Desktop & Large Screens (> 1024px)                                        */
+/*  Desktop & Large Screens (> 1080px)                                        */
 /* -------------------------------------------------------------------------- */
-@media (min-width: 1025px) {
+@media (min-width: 1081px) {
   .mobile-menu-toggle {
     display: none !important;
   }
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Medium Screens & Tablets (<= 1024px)                                      */
+/*  Medium Screens & Tablets (<= 1080px)                                      */
 /* -------------------------------------------------------------------------- */
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .nav-links {
     display: none;
   }
