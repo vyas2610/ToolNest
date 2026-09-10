@@ -1414,8 +1414,8 @@ textarea.form-control {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.75fr repeat(5, minmax(130px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 2.5rem;
   margin-bottom: 3rem;
 }
 
