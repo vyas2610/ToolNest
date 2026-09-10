@@ -4,16 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToolNest – Simple, Fast & Free Online Tools</title>
+  <title>ToolNest – Free Online PDF, Image & Text Tools | Browser Utilities</title>
   <meta name="description"
-    content="ToolNest provides simple, fast, and privacy-focused free online tools for images, PDFs, text, and developers. Process files directly in your browser with zero uploads.">
+    content="ToolNest provides simple, fast, and privacy-focused free online tools for PDF merging, image compressing, text formatting, and developer utilities. Process files directly in your browser with zero uploads.">
+  <meta name="keywords"
+    content="online pdf tools, image compressor, word counter, merge pdf online, jpg to png, pdf converter, text utilities, developer tools, free online tools">
   <link rel="canonical" href="https://toolnestonline.netlify.app/">
+
+  <!-- Reciprocal Bidirectional Hreflang Tags for International SEO -->
+  <link rel="alternate" hreflang="x-default" href="https://toolnestonline.netlify.app/">
+  <link rel="alternate" hreflang="en" href="https://toolnestonline.netlify.app/">
+  <link rel="alternate" hreflang="pt-BR" href="https://toolnestonline.netlify.app/br/">
+  <link rel="alternate" hreflang="id" href="https://toolnestonline.netlify.app/id/">
+  <link rel="alternate" hreflang="de" href="https://toolnestonline.netlify.app/de/">
+  <link rel="alternate" hreflang="es-MX" href="https://toolnestonline.netlify.app/mx/">
+  <link rel="alternate" hreflang="fr" href="https://toolnestonline.netlify.app/fr/">
+  <link rel="alternate" hreflang="en-PH" href="https://toolnestonline.netlify.app/ph/">
+  <link rel="alternate" hreflang="tl" href="https://toolnestonline.netlify.app/ph/">
+  <link rel="alternate" hreflang="ja" href="https://toolnestonline.netlify.app/jp/">
+  <link rel="alternate" hreflang="ru" href="https://toolnestonline.netlify.app/ru/">
+  <link rel="alternate" hreflang="es-ES" href="https://toolnestonline.netlify.app/es/">
+  <link rel="alternate" hreflang="vi" href="https://toolnestonline.netlify.app/vn/">
+
   <meta name="google-site-verification" content="cPCH5styxL8S16xRxPTRPbldtWIqnxGxp9fj9ZMoRno" />
 
   <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="ToolNest – Simple, Fast & Free Online Tools">
+  <meta property="og:title" content="ToolNest – Free Online PDF, Image & Text Tools">
   <meta property="og:description"
-    content="Free, fast, and private online tools for images, PDFs, text formatting, and developer workflows.">
+    content="Free, fast, and private online tools for images, PDFs, text formatting, and developer workflows. Zero server uploads.">
   <meta property="og:url" content="https://toolnestonline.netlify.app/">
   <meta property="og:type" content="website">
 
@@ -33,7 +51,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 
-  <!-- Structured Data (WebSite & FAQPage) -->
+  <!-- Structured Data (WebSite, WebApplication, FAQPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,6 +65,29 @@
           "target": "https://toolnestonline.netlify.app/?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
+      },
+      {
+        "@type": "WebApplication",
+        "name": "ToolNest Online Utilities",
+        "url": "https://toolnestonline.netlify.app/",
+        "description": "High-performance privacy-focused online PDF, image, and text utilities running entirely in your browser.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript and HTML5 Canvas support",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Client-side Image Compressor & Resizer",
+          "Lossless JPG to PNG and PNG to JPG Converter",
+          "Secure PDF Merger & Stream Compressor",
+          "JPG to PDF and PDF to JPG Extractor",
+          "Real-time Word & Character Counter",
+          "Text Case Converter & Duplicate Line Remover",
+          "Developer JSON Formatter & Base64 Encoder"
+        ]
       },
       {
         "@type": "FAQPage",
@@ -111,6 +152,7 @@
           <li><a href="#pdf-tools">PDF Tools</a></li>
           <li><a href="#text-tools">Text Tools</a></li>
           <li><a href="#developer-tools">Developer Tools</a></li>
+          <li><a href="#worldwide-regions">Regions</a></li>
           <li><a href="blog/index.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -118,6 +160,37 @@
       </nav>
 
       <div class="header-actions">
+        <!-- International Language / Region Selector -->
+        <div class="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Select Country or Language" aria-expanded="false">
+            <span class="globe-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </span>
+            <span>Regions</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-dropdown-menu" role="menu">
+            <div class="lang-menu-header">Worldwide Hubs</div>
+            <a href="index.html" class="lang-option active" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🌐</span> Global (English)</span><span class="lang-code">en</span></a>
+            <a href="br/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇧🇷</span> Brasil (Português)</span><span class="lang-code">pt-BR</span></a>
+            <a href="id/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇮🇩</span> Indonesia (Bahasa)</span><span class="lang-code">id</span></a>
+            <a href="de/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇩🇪</span> Deutschland (Deutsch)</span><span class="lang-code">de</span></a>
+            <a href="mx/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇲🇽</span> México (Español)</span><span class="lang-code">es-MX</span></a>
+            <a href="fr/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇫🇷</span> France (Français)</span><span class="lang-code">fr</span></a>
+            <a href="ph/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇵🇭</span> Philippines (Tagalog / English)</span><span class="lang-code">en-PH</span></a>
+            <a href="jp/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇯🇵</span> 日本 (日本語)</span><span class="lang-code">ja</span></a>
+            <a href="ru/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇷🇺</span> Россия (Русский)</span><span class="lang-code">ru</span></a>
+            <a href="es/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇪🇸</span> España (Español)</span><span class="lang-code">es-ES</span></a>
+            <a href="vn/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇻🇳</span> Việt Nam (Tiếng Việt)</span><span class="lang-code">vi</span></a>
+          </div>
+        </div>
+
         <button type="button" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
@@ -143,6 +216,7 @@
       <li><a href="#pdf-tools">PDF Tools</a></li>
       <li><a href="#text-tools">Text Tools</a></li>
       <li><a href="#developer-tools">Developer Tools</a></li>
+      <li><a href="#worldwide-regions">Global Regions</a></li>
       <li><a href="blog/index.html">Blog</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -367,6 +441,207 @@
       </div>
     </section>
 
+    <!-- Worldwide Regional Hubs Section -->
+    <section id="worldwide-regions" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">ToolNest Worldwide Hubs</h2>
+          <p class="section-subtitle">Discover localized online tools tailored for your native language, keywords, and browser workflow.</p>
+        </div>
+        <div class="regions-grid">
+          <!-- Brazil -->
+          <a href="br/index.html" class="region-hub-card">
+            <div class="region-hub-top">
+              <span class="region-hub-flag">🇧🇷</span>
+              <span class="region-hub-locale">pt-BR</span>
+            </div>
+            <h3 class="region-hub-name">Brasil</h3>
+            <p class="region-hub-lang">Português (Brasil)</p>
+            <div class="region-hub-keywords">
+              <span class="keyword-pill">Juntar PDF</span>
+              <span class="keyword-pill">Comprimir Imagem</span>
+              <span class="keyword-pill">Contador Palavras</span>
+            </div>
+            <div class="region-hub-footer">
+              <span>Acessar Ferramentas</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Indonesia -->
+          <a href="id/index.html" class="region-hub-card">
+            <div class="region-hub-top">
+              <span class="region-hub-flag">🇮🇩</span>
+              <span class="region-hub-locale">id</span>
+            </div>
+            <h3 class="region-hub-name">Indonesia</h3>
+            <p class="region-hub-lang">Bahasa Indonesia</p>
+            <div class="region-hub-keywords">
+              <span class="keyword-pill">Gabungkan PDF</span>
+              <span class="keyword-pill">Kompres Foto</span>
+              <span class="keyword-pill">Hitung Kata</span>
+            </div>
+            <div class="region-hub-footer">
+              <span>Buka Alat Online</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Germany -->
+          <a href="de/index.html" class="region-hub-card">
+            <div class="region-hub-top">
+              <span class="region-hub-flag">🇩🇪</span>
+              <span class="region-hub-locale">de</span>
+            </div>
+            <h3 class="region-hub-name">Deutschland</h3>
+            <p class="region-hub-lang">Deutsch</p>
+            <div class="region-hub-keywords">
+              <span class="keyword-pill">PDF zusammenfügen</span>
+              <span class="keyword-pill">Bild komprimieren</span>
+              <span class="keyword-pill">Wörter zählen</span>
+            </div>
+            <div class="region-hub-footer">
+              <span>Werkzeuge öffnen</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Mexico -->
+          <a href="mx/index.html" class="region-hub-card">
+            <div class="region-hub-top">
+              <span class="region-hub-flag">🇲🇽</span>
+              <span class="region-hub-locale">es-MX</span>
+            </div>
+            <h3 class="region-hub-name">México</h3>
+            <p class="region-hub-lang">Español (México)</p>
+            <div class="region-hub-keywords">
+              <span class="keyword-pill">Unir PDF</span>
+              <span class="keyword-pill">Reducir Peso Imagen</span>
+              <span class="keyword-pill">Contador Palabras</span>
+            </div>
+            <div class="region-hub-footer">
+              <span>Abrir Herramientas</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- France -->
+          <a href="fr/index.html" class="region-hub-card">
+            <div class="region-hub-top">
+              <span class="region-hub-flag">🇫🇷</span>
+              <span class="region-hub-locale">fr</span>
+            </div>
+            <h3 class="region-hub-name">France</h3>
+            <p class="region-hub-lang">Français</p>
+            <div class="region-hub-keywords">
+              <span class="keyword-pill">Fusionner PDF</span>
+              <span class="keyword-pill">Compresser Image</span>
+              <span class="keyword-pill">Compteur Mots</span>
+            </div>
+            <div class="region-hub-footer">
+              <span>Accéder aux Outils</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Philippines -->
+          <a href="ph/index.html" class="region-hub-card">
+            <div class="region-hub-top">
+              <span class="region-hub-flag">🇵🇭</span>
+              <span class="region-hub-locale">en-PH / tl</span>
+            </div>
+            <h3 class="region-hub-name">Philippines</h3>
+            <p class="region-hub-lang">Tagalog / English</p>
+            <div class="region-hub-keywords">
+              <span class="keyword-pill">Pagsamahin ang PDF</span>
+              <span class="keyword-pill">Paliitin Picture</span>
+              <span class="keyword-pill">Bilang ng Salita</span>
+            </div>
+            <div class="region-hub-footer">
+              <span>Gamitin ang Tools</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Japan -->
+          <a href="jp/index.html" class="region-hub-card">
+            <div class="region-hub-top">
+              <span class="region-hub-flag">🇯🇵</span>
+              <span class="region-hub-locale">ja</span>
+            </div>
+            <h3 class="region-hub-name">日本</h3>
+            <p class="region-hub-lang">日本語</p>
+            <div class="region-hub-keywords">
+              <span class="keyword-pill">PDF 結合</span>
+              <span class="keyword-pill">画像 圧縮</span>
+              <span class="keyword-pill">文字数 カウント</span>
+            </div>
+            <div class="region-hub-footer">
+              <span>ツールを使う</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Russia -->
+          <a href="ru/index.html" class="region-hub-card">
+            <div class="region-hub-top">
+              <span class="region-hub-flag">🇷🇺</span>
+              <span class="region-hub-locale">ru</span>
+            </div>
+            <h3 class="region-hub-name">Россия</h3>
+            <p class="region-hub-lang">Русский</p>
+            <div class="region-hub-keywords">
+              <span class="keyword-pill">Объединить ПДФ</span>
+              <span class="keyword-pill">Сжать Фото</span>
+              <span class="keyword-pill">Счетчик Слов</span>
+            </div>
+            <div class="region-hub-footer">
+              <span>Открыть Инструменты</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Spain -->
+          <a href="es/index.html" class="region-hub-card">
+            <div class="region-hub-top">
+              <span class="region-hub-flag">🇪🇸</span>
+              <span class="region-hub-locale">es-ES</span>
+            </div>
+            <h3 class="region-hub-name">España</h3>
+            <p class="region-hub-lang">Español (España)</p>
+            <div class="region-hub-keywords">
+              <span class="keyword-pill">Unir PDF</span>
+              <span class="keyword-pill">Optimizar Imagen</span>
+              <span class="keyword-pill">Contar Palabras</span>
+            </div>
+            <div class="region-hub-footer">
+              <span>Explorar Herramientas</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Vietnam -->
+          <a href="vn/index.html" class="region-hub-card">
+            <div class="region-hub-top">
+              <span class="region-hub-flag">🇻🇳</span>
+              <span class="region-hub-locale">vi</span>
+            </div>
+            <h3 class="region-hub-name">Việt Nam</h3>
+            <p class="region-hub-lang">Tiếng Việt</p>
+            <div class="region-hub-keywords">
+              <span class="keyword-pill">Gộp File PDF</span>
+              <span class="keyword-pill">Nén Ảnh Giảm Dung Lượng</span>
+              <span class="keyword-pill">Đếm Từ Online</span>
+            </div>
+            <div class="region-hub-footer">
+              <span>Sử Dụng Công Cụ</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="section" style="background-color: var(--bg-tertiary);">
       <div class="container">
@@ -505,6 +780,21 @@
             <li><a href="tools/duplicate-line-remover.html">Duplicate Remover</a></li>
             <li><a href="tools/json-formatter.html">JSON Formatter</a></li>
             <li><a href="tools/base64-encoder-decoder.html">Base64 Encoder</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">International Hubs</h4>
+          <ul class="footer-links">
+            <li><a href="br/index.html">🇧🇷 Brasil (Português)</a></li>
+            <li><a href="id/index.html">🇮🇩 Indonesia (Bahasa)</a></li>
+            <li><a href="de/index.html">🇩🇪 Deutschland (Deutsch)</a></li>
+            <li><a href="mx/index.html">🇲🇽 México (Español)</a></li>
+            <li><a href="fr/index.html">🇫🇷 France (Français)</a></li>
+            <li><a href="ph/index.html">🇵🇭 Philippines (Tagalog)</a></li>
+            <li><a href="jp/index.html">🇯🇵 日本 (日本語)</a></li>
+            <li><a href="ru/index.html">🇷🇺 Россия (Русский)</a></li>
+            <li><a href="es/index.html">🇪🇸 España (Español)</a></li>
+            <li><a href="vn/index.html">🇻🇳 Việt Nam (Tiếng Việt)</a></li>
           </ul>
         </div>
         <div>

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libreng Online Tools – Pagsamahin ang PDF, Paliitin ang Size ng Picture | ToolNest Philippines</title>
+  <meta name="description"
+    content="Libreng online utilities sa Pilipinas: pagsamahin ang PDF, bawasan ang size ng pdf, paliitin ang picture, gawing PNG ang JPG, at bilang ng salita. Walang server uploads.">
+  <meta name="keywords"
+    content="pagsamahin ang pdf, bawasan ang size ng pdf, paliitin ang size ng picture, tanggalin ang background ng picture, gawing png ang jpg, bilang ng salita, hatiin ang pdf, putulin ang litrato online">
+  <link rel="canonical" href="https://toolnestonline.netlify.app/ph/">
+
+  <!-- Reciprocal Bidirectional Hreflang Tags for International SEO -->
+  <link rel="alternate" hreflang="x-default" href="https://toolnestonline.netlify.app/">
+  <link rel="alternate" hreflang="en" href="https://toolnestonline.netlify.app/">
+  <link rel="alternate" hreflang="pt-BR" href="https://toolnestonline.netlify.app/br/">
+  <link rel="alternate" hreflang="id" href="https://toolnestonline.netlify.app/id/">
+  <link rel="alternate" hreflang="de" href="https://toolnestonline.netlify.app/de/">
+  <link rel="alternate" hreflang="es-MX" href="https://toolnestonline.netlify.app/mx/">
+  <link rel="alternate" hreflang="fr" href="https://toolnestonline.netlify.app/fr/">
+  <link rel="alternate" hreflang="en-PH" href="https://toolnestonline.netlify.app/ph/">
+  <link rel="alternate" hreflang="tl" href="https://toolnestonline.netlify.app/ph/">
+  <link rel="alternate" hreflang="ja" href="https://toolnestonline.netlify.app/jp/">
+  <link rel="alternate" hreflang="ru" href="https://toolnestonline.netlify.app/ru/">
+  <link rel="alternate" hreflang="es-ES" href="https://toolnestonline.netlify.app/es/">
+  <link rel="alternate" hreflang="vi" href="https://toolnestonline.netlify.app/vn/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Libreng Online Tools Pilipinas – ToolNest">
+  <meta property="og:description"
+    content="Pagsamahin ang PDF, paliitin ang picture, i-convert ang JPG sa PNG, at bilang ng salita diretso sa iyong browser nang walang server uploads.">
+  <meta property="og:url" content="https://toolnestonline.netlify.app/ph/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_PH">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <!-- Theme early-init -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('toolnest_theme');
+        var p = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var t = s || (p ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <!-- JSON-LD Structured Data: WebApplication + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "ToolNest Philippines – Libreng Online Tools",
+        "url": "https://toolnestonline.netlify.app/ph/",
+        "description": "Libreng online tools sa Pilipinas para pagsamahin ang PDF, paliitin ang size ng picture, gawing PNG ang JPG, at bilang ng salita.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript and HTML5 Canvas support",
+        "inLanguage": "en-PH",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PHP"
+        },
+        "featureList": [
+          "Pagsamahin ang PDF at hatiin ang mga pahina",
+          "Bawasan ang size ng PDF at magbawas ng KB",
+          "Paliitin ang size ng picture at pampalinaw ng larawan",
+          "Gawing PNG ang JPG at PNG to JPG",
+          "Baguhin ang size ng larawan at putulin ang litrato online",
+          "Bilang ng salita at bilang ng letra sa talata",
+          "Palitan ng malalaking titik at baligtarin ang mga letra"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Libre ba ang paggamit ng ToolNest sa Pilipinas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oo! 100% libre ang lahat ng tools sa ToolNest nang walang bayad, walang subscription, at hindi kailangang mag-sign up o maglagay ng credit card."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Naka-save ba ang mga personal na files ko sa server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hindi. Lahat ng proseso ay nangyayari diretso sa iyong browser gamit ang iyong computer o cellphone. Walang files na ina-upload sa internet kaya garantisadong pribado ang mga dokumento mo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Pwede ko ba itong gamitin sa aking smartphone o tablet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oo, ang ToolNest ay mabilis at responsive sa kahit anong mobile phone gamit ang Safari sa iPhone o Google Chrome sa Android."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M14 16 L24 10 L34 16 L34 32 L24 38 L14 32 Z" />
+          </svg>
+        </span>
+        <span class="brand-text">Tool<span>Nest</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html">Global</a></li>
+          <li><a href="#pdf-tools" class="active">PDF Tools</a></li>
+          <li><a href="#image-tools">Image Tools</a></li>
+          <li><a href="#text-tools">Text Tools</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- International Language / Region Selector -->
+        <div class="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Piliin ang Rehiyon" aria-expanded="false">
+            <span class="lang-flag">🇵🇭</span>
+            <span>Philippines</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-dropdown-menu" role="menu">
+            <div class="lang-menu-header">Worldwide Hubs</div>
+            <a href="../index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🌐</span> Global (English)</span><span class="lang-code">en</span></a>
+            <a href="../br/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇧🇷</span> Brasil (Português)</span><span class="lang-code">pt-BR</span></a>
+            <a href="../id/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇮🇩</span> Indonesia (Bahasa)</span><span class="lang-code">id</span></a>
+            <a href="../de/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇩🇪</span> Deutschland (Deutsch)</span><span class="lang-code">de</span></a>
+            <a href="../mx/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇲🇽</span> México (Español)</span><span class="lang-code">es-MX</span></a>
+            <a href="../fr/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇫🇷</span> France (Français)</span><span class="lang-code">fr</span></a>
+            <a href="index.html" class="lang-option active" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇵🇭</span> Philippines (Tagalog)</span><span class="lang-code">en-PH</span></a>
+            <a href="../jp/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇯🇵</span> 日本 (日本語)</span><span class="lang-code">ja</span></a>
+            <a href="../ru/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇷🇺</span> Россия (Русский)</span><span class="lang-code">ru</span></a>
+            <a href="../es/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇪🇸</span> España (Español)</span><span class="lang-code">es-ES</span></a>
+            <a href="../vn/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇻🇳</span> Việt Nam (Tiếng Việt)</span><span class="lang-code">vi</span></a>
+          </div>
+        </div>
+
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-backdrop"></div>
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-links">
+      <li><a href="../index.html">Global English</a></li>
+      <li><a href="#pdf-tools" class="active">Mga Gamit sa PDF</a></li>
+      <li><a href="#image-tools">Mga Gamit sa Picture</a></li>
+      <li><a href="#text-tools">Mga Gamit sa Teksto</a></li>
+      <li><a href="#faq">Mga Tanong (FAQ)</a></li>
+      <li><a href="../about.html">Tungkol sa Amin</a></li>
+      <li><a href="../contact.html">Kontak</a></li>
+    </ul>
+  </div>
+
+  <main class="main-content">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Philippines (en-PH / tl)</span>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="region-hero-pill">
+          <span>🇵🇭</span> Philippines Edition &bull; Tagalog / English
+        </div>
+        <h1 class="hero-title">Libreng Online Tools para sa PDF, Picture at Teksto</h1>
+        <p class="hero-subtitle">
+          Pagsamahin ang PDF, bawasan ang size ng pdf, paliitin ang picture, gawing PNG ang JPG, at bilang ng salita – mabilis at ligtas nang direkta sa iyong browser nang walang server uploads.
+        </p>
+      </div>
+    </section>
+
+    <!-- Category 1: PDF Tools (10 Keywords) -->
+    <section id="pdf-tools" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Mga Gamit sa PDF</span>
+          <h2 class="section-title">PDF Tools</h2>
+          <p class="section-subtitle">Ayusin, pagsamahin, at paliitin ang iyong mga dokumentong PDF nang may kumpletong privacy.</p>
+        </div>
+
+        <div class="keyword-tools-grid">
+          <!-- 1. pagsamahin ang pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="16" height="18" x="4" y="4" rx="2"/><path d="M4 10h16"/><path d="M10 14h4"/></svg>
+              </div>
+              <span class="keyword-card-badge">PDF</span>
+            </div>
+            <h3 class="keyword-card-title">Pagsamahin ang PDF</h3>
+            <p class="keyword-card-desc">Pagsamahin ang iba't ibang PDF files sa isang kumpletong dokumento sa tamang pagkakasunod-sunod.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 2. bawasan ang size ng pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 3-3 3 3"/><path d="M12 12v6"/></svg>
+              </div>
+              <span class="keyword-card-badge">Compress</span>
+            </div>
+            <h3 class="keyword-card-title">Bawasan ang Size ng PDF</h3>
+            <p class="keyword-card-desc">Paliitin ang file size ng PDF para madaling mai-send sa email o online application forms.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-compressor.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 3. gawing word ang pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+              </div>
+              <span class="keyword-card-badge">Convert</span>
+            </div>
+            <h3 class="keyword-card-title">Gawing Word ang PDF</h3>
+            <p class="keyword-card-desc">Kumuha ng teksto at nilalaman mula sa iyong PDF para madaling mabago at ma-edit.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-to-jpg.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 4. paano mag edit ng pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              </div>
+              <span class="keyword-card-badge">Gabay / Tool</span>
+            </div>
+            <h3 class="keyword-card-title">Paano Mag Edit ng PDF</h3>
+            <p class="keyword-card-desc">Madaling paraan para ayusin at isaayos ang mga pahina ng PDF nang libre sa iyong browser.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 5. hatiin ang pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="16" y1="3" x2="16" y2="21"/><line x1="8" y1="3" x2="8" y2="21"/><rect width="20" height="18" x="2" y="3" rx="2"/></svg>
+              </div>
+              <span class="keyword-card-badge">Split</span>
+            </div>
+            <h3 class="keyword-card-title">Hatiin ang PDF</h3>
+            <p class="keyword-card-desc">Ihiwalay ang mga partikular na pahina o hatiin ang malalaking PDF sa maliliit na bahagi.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 6. pirmahan ang pdf online -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+              </div>
+              <span class="keyword-card-badge">Pirma</span>
+            </div>
+            <h3 class="keyword-card-title">Pirmahan ang PDF Online</h3>
+            <p class="keyword-card-desc">Ihanda at kumpirmahin ang iyong mga digital form nang may proteksyon sa pribadong impormasyon.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 7. gawing picture ang pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="1"/><path d="m14 17-2-2-4 4"/></svg>
+              </div>
+              <span class="keyword-card-badge">Larawan</span>
+            </div>
+            <h3 class="keyword-card-title">Gawing Picture ang PDF</h3>
+            <p class="keyword-card-desc">I-convert ang bawat pahina ng PDF sa malinaw na JPG o PNG image para madaling maibahagi.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-to-jpg.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 8. tanggalin ang password sa pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+              </div>
+              <span class="keyword-card-badge">Unlock</span>
+            </div>
+            <h3 class="keyword-card-title">Tanggalin ang Password sa PDF</h3>
+            <p class="keyword-card-desc">I-optimize at alisin ang mga balakid sa mga protektadong PDF stream para madaling mabasa.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-compressor.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 9. ayusin ang mga pahina ng pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+              </div>
+              <span class="keyword-card-badge">Organisa</span>
+            </div>
+            <h3 class="keyword-card-title">Ayusin ang mga Pahina ng PDF</h3>
+            <p class="keyword-card-desc">I-reorder at pagpalitin ang mga pahina para maging malinis at maayos ang iyong dokumento.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 10. magdagdag ng page number sa pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
+              </div>
+              <span class="keyword-card-badge">Numero</span>
+            </div>
+            <h3 class="keyword-card-title">Magdagdag ng Page Number sa PDF</h3>
+            <p class="keyword-card-desc">Ihanda ang mga pahina para sa pag-print at pag-compile ng pormal na proyekto o report.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 2: Image Tools (10 Keywords) -->
+    <section id="image-tools" class="section" style="background-color: var(--bg-tertiary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Mga Gamit sa Litrato</span>
+          <h2 class="section-title">Image Tools</h2>
+          <p class="section-subtitle">Paliitin, putulin, palitan ang format, at pagandahin ang mga larawan nang libre.</p>
+        </div>
+
+        <div class="keyword-tools-grid">
+          <!-- 1. tanggalin ang background ng picture -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 14.14 14.14"/></svg>
+              </div>
+              <span class="keyword-card-badge">Background</span>
+            </div>
+            <h3 class="keyword-card-title">Tanggalin ang Background ng Picture</h3>
+            <p class="keyword-card-desc">Gawing transparent ang background ng iyong mga litrato at logo para sa magandang layout.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/png-to-jpg.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 2. paliitin ang size ng picture -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg>
+              </div>
+              <span class="keyword-card-badge">Compress</span>
+            </div>
+            <h3 class="keyword-card-title">Paliitin ang Size ng Picture</h3>
+            <p class="keyword-card-desc">Bawasan ang bigat ng litrato sa KB nang hindi lumalabo ang mukha at detalye.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-compressor.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 3. pampalinaw ng malabong picture -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="keyword-card-badge">Linaw</span>
+            </div>
+            <h3 class="keyword-card-title">Pampalinaw ng Malabong Picture</h3>
+            <p class="keyword-card-desc">Palakasin ang linaw at resolution ng mga malabong litrato gamit ang smart resampling.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-resizer.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 4. baguhin ang size ng larawan -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
+              </div>
+              <span class="keyword-card-badge">Resize</span>
+            </div>
+            <h3 class="keyword-card-title">Baguhin ang Size ng Larawan</h3>
+            <p class="keyword-card-desc">Baguhin ang lapad at taas sa pixels para sa 1x1, 2x2 ID picture o social media posts.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-resizer.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 5. palitan ang background ng picture -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m3 16 5-5c.928-.893 2.072-.893 3 0l5 5"/><path d="m14 14 1-1c.928-.893 2.072-.893 3 0l3 3"/></svg>
+              </div>
+              <span class="keyword-card-badge">Kulay</span>
+            </div>
+            <h3 class="keyword-card-title">Palitan ang Background ng Picture</h3>
+            <p class="keyword-card-desc">Gawing puti, asul o pula ang background ng iyong ID picture nang mabilis at libre.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/png-to-jpg.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 6. putulin ang litrato online -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg>
+              </div>
+              <span class="keyword-card-badge">Crop</span>
+            </div>
+            <h3 class="keyword-card-title">Putulin ang Litrato Online</h3>
+            <p class="keyword-card-desc">I-crop ang picture sa 1:1 square, 4:3, 16:9, o custom size para maayos ang kuha.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-cropper.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 7. pataasin ang linaw ng litrato -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <span class="keyword-card-badge">HD</span>
+            </div>
+            <h3 class="keyword-card-title">Pataasin ang Linaw ng Litrato</h3>
+            <p class="keyword-card-desc">Ayusin ang pixels at linawin ang larawan bago i-upload sa Facebook o Instagram.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-resizer.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 8. gawing png ang jpg -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+              </div>
+              <span class="keyword-card-badge">Format</span>
+            </div>
+            <h3 class="keyword-card-title">Gawing PNG ang JPG</h3>
+            <p class="keyword-card-desc">I-convert ang JPG images sa high-quality PNG format nang walang kupas.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/jpg-to-png.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 9. magbawas ng kb ng larawan -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 3 3 3-3"/><path d="M12 9v6"/></svg>
+              </div>
+              <span class="keyword-card-badge">Target KB</span>
+            </div>
+            <h3 class="keyword-card-title">Magbawas ng KB ng Larawan</h3>
+            <p class="keyword-card-desc">Paliitin ang laki ng file para sumakto sa mga limitasyon ng government portals.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-compressor.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 10. pampaganda ng picture -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="keyword-card-badge">Enhance</span>
+            </div>
+            <h3 class="keyword-card-title">Pampaganda ng Picture</h3>
+            <p class="keyword-card-desc">I-adjust ang framing, laki, at format para maging kaaya-aya ang iyong mga litrato.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-cropper.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 3: Text Tools (10 Keywords) -->
+    <section id="text-tools" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Mga Gamit sa Salita</span>
+          <h2 class="section-title">Text Tools</h2>
+          <p class="section-subtitle">Bilangin ang mga salita at letra, palitan ang capitalization, at i-format ang teksto.</p>
+        </div>
+
+        <div class="keyword-tools-grid">
+          <!-- 1. bilang ng salita -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+              </div>
+              <span class="keyword-card-badge">Bilang</span>
+            </div>
+            <h3 class="keyword-card-title">Bilang ng Salita</h3>
+            <p class="keyword-card-desc">Alamin agad ang bilang ng salita, pangungusap, talata, at oras ng pagbasa habang nagta-type.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 2. paraphrase tagalog -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
+              <span class="keyword-card-badge">Pagsulat</span>
+            </div>
+            <h3 class="keyword-card-title">Paraphrase Tagalog</h3>
+            <p class="keyword-card-desc">I-rephrase ang mga pangungusap para sa mas malinaw at orihinal na sanaysay o thesis.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 3. tagalog grammar checker -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <span class="keyword-card-badge">Gramatika</span>
+            </div>
+            <h3 class="keyword-card-title">Tagalog Grammar Checker</h3>
+            <p class="keyword-card-desc">Suriin ang wastong gamit ng mga salita at baybay sa iyong mga isinulat na talata.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 4. pampaikli ng talata -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="7" y2="18"/></svg>
+              </div>
+              <span class="keyword-card-badge">Buod</span>
+            </div>
+            <h3 class="keyword-card-title">Pampaikli ng Talata</h3>
+            <p class="keyword-card-desc">Gawing maikli at direkta sa punto ang mahahabang talata para sa madaling pag-unawa.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 5. bilang ng letra -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <span class="keyword-card-badge">Karakter</span>
+            </div>
+            <h3 class="keyword-card-title">Bilang ng Letra</h3>
+            <p class="keyword-card-desc">Alamin ang eksaktong bilang ng characters mayroon man o walang espasyo.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 6. palitan ng malalaking titik -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 15 4-8 4 8"/><path d="M4.5 12h5"/><path d="M15 11v4a2 2 0 0 0 4 0v-4"/><path d="M19 15h.01"/><path d="M15 15h.01"/></svg>
+              </div>
+              <span class="keyword-card-badge">Capitalize</span>
+            </div>
+            <h3 class="keyword-card-title">Palitan ng Malalaking Titik</h3>
+            <p class="keyword-card-desc">I-convert ang teksto sa ALL CAPS, maliliit na titik, o Title Case sa isang pindot lang.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/case-converter.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 7. tagasuri ng plagiarism -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+              </div>
+              <span class="keyword-card-badge">Plagiarism</span>
+            </div>
+            <h3 class="keyword-card-title">Tagasuri ng Plagiarism</h3>
+            <p class="keyword-card-desc">Suriin ang pagka-orihinal at hanapin ang mga paulit-ulit na linya sa iyong sanaysay.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/duplicate-line-remover.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 8. tagagawa ng buod ng teksto -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+              </div>
+              <span class="keyword-card-badge">Summary</span>
+            </div>
+            <h3 class="keyword-card-title">Tagagawa ng Buod ng Teksto</h3>
+            <p class="keyword-card-desc">Kumuha ng buod at mahahalagang impormasyon mula sa mga mahahabang artikulo.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 9. baligtarin ang mga letra -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="M14.5 4v16"/></svg>
+              </div>
+              <span class="keyword-card-badge">Baligtarin</span>
+            </div>
+            <h3 class="keyword-card-title">Baligtarin ang mga Letra</h3>
+            <p class="keyword-card-desc">I-reverse ang order ng mga letra at salita mula dulo hanggang simula.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/case-converter.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 10. pangwasto ng baybay -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/></svg>
+              </div>
+              <span class="keyword-card-badge">Spelling</span>
+            </div>
+            <h3 class="keyword-card-title">Pangwasto ng Baybay</h3>
+            <p class="keyword-card-desc">Linisin ang dobleng linya at itama ang baybay ng mga salita sa iyong listahan.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/duplicate-line-remover.html" class="btn btn-primary btn-sm">Gamitin ang Tool &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (3 Localized Questions) -->
+    <section id="faq" class="section" style="background-color: var(--bg-tertiary);">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Mga Karaniwang Tanong</span>
+          <h2 class="section-title">Mga Madalas Itanong (FAQ)</h2>
+          <p class="section-subtitle">Gabay sa paggamit ng ToolNest sa Pilipinas.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Libre ba ang paggamit ng ToolNest sa Pilipinas?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Oo, 100% libre ang lahat ng gamit sa ToolNest nang walang bayad, walang subscription, at hindi kailangang mag-sign up o maglagay ng credit card.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Naka-save ba ang mga personal na files ko sa server?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Hindi. Lahat ng proseso tulad ng pag-compress ng litrato o pagsasama ng PDF ay ginagawa mismo sa iyong browser (client-side). Hindi kailanman ina-upload ang iyong mga dokumento sa internet, kaya ligtas ang iyong privacy.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Pwede ko ba itong gamitin sa aking smartphone o tablet?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Oo! Ang ToolNest ay fully responsive at gumagana sa Safari sa iPhone at Chrome sa mga Android smartphone. Direktang i-upload ang file mula sa gallery at i-download agad ang resulta.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <span class="brand-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M14 16 L24 10 L34 16 L34 32 L24 38 L14 32 Z" />
+              </svg>
+            </span>
+            <span class="brand-text">Tool<span>Nest</span></span>
+          </a>
+          <p>Libre, mabilis, at pribadong online tools sa browser. Walang uploads, 100% protektado ang iyong datos.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Picture Tools</h4>
+          <ul class="footer-links">
+            <li><a href="../tools/image-compressor.html">Paliitin ang Litrato</a></li>
+            <li><a href="../tools/image-resizer.html">Baguhin ang Size</a></li>
+            <li><a href="../tools/jpg-to-png.html">JPG papuntang PNG</a></li>
+            <li><a href="../tools/png-to-jpg.html">PNG papuntang JPG</a></li>
+            <li><a href="../tools/image-cropper.html">I-crop ang Picture</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">PDF Tools</h4>
+          <ul class="footer-links">
+            <li><a href="../tools/pdf-merger.html">Pagsamahin ang PDF</a></li>
+            <li><a href="../tools/pdf-compressor.html">Bawasan ang Size</a></li>
+            <li><a href="../tools/jpg-to-pdf.html">JPG gawing PDF</a></li>
+            <li><a href="../tools/pdf-to-jpg.html">PDF gawing Litrato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Teksto at Dev</h4>
+          <ul class="footer-links">
+            <li><a href="../tools/word-counter.html">Bilang ng Salita</a></li>
+            <li><a href="../tools/case-converter.html">Palitan ng Malalaking Titik</a></li>
+            <li><a href="../tools/duplicate-line-remover.html">Tanggalin ang Duplicates</a></li>
+            <li><a href="../tools/json-formatter.html">JSON Formatter</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Ibang Bansa</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">🌐 Global (English)</a></li>
+            <li><a href="../id/index.html">🇮🇩 Indonesia (Bahasa)</a></li>
+            <li><a href="../vn/index.html">🇻🇳 Việt Nam (Tiếng Việt)</a></li>
+            <li><a href="../jp/index.html">🇯🇵 日本 (日本語)</a></li>
+            <li><a href="../mx/index.html">🇲🇽 México (Español)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Impormasyon</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">Tungkol sa Amin</a></li>
+            <li><a href="../contact.html">Kontak</a></li>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year"></span> ToolNest Philippines. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="../privacy-policy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/config.js"></script>
+  <script src="../js/tools.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/analytics.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

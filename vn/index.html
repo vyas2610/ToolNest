@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Công Cụ Online Miễn Phí – Gộp File PDF, Nén Ảnh & Đếm Từ | ToolNest Việt Nam</title>
+  <meta name="description"
+    content="Bộ công cụ online miễn phí: gộp file PDF, nén file PDF, giảm dung lượng ảnh, chuyển ảnh sang PNG, đếm từ online. Xử lý trực tiếp trên trình duyệt, bảo mật 100%.">
+  <meta name="keywords"
+    content="gộp file pdf, nén file pdf, giảm dung lượng ảnh, chuyển ảnh sang png, thay đổi kích thước ảnh, đếm từ online, tách trang pdf, xóa nền ảnh online, đếm ký tự văn bản">
+  <link rel="canonical" href="https://toolnestonline.netlify.app/vn/">
+
+  <!-- Reciprocal Bidirectional Hreflang Tags for International SEO -->
+  <link rel="alternate" hreflang="x-default" href="https://toolnestonline.netlify.app/">
+  <link rel="alternate" hreflang="en" href="https://toolnestonline.netlify.app/">
+  <link rel="alternate" hreflang="pt-BR" href="https://toolnestonline.netlify.app/br/">
+  <link rel="alternate" hreflang="id" href="https://toolnestonline.netlify.app/id/">
+  <link rel="alternate" hreflang="de" href="https://toolnestonline.netlify.app/de/">
+  <link rel="alternate" hreflang="es-MX" href="https://toolnestonline.netlify.app/mx/">
+  <link rel="alternate" hreflang="fr" href="https://toolnestonline.netlify.app/fr/">
+  <link rel="alternate" hreflang="en-PH" href="https://toolnestonline.netlify.app/ph/">
+  <link rel="alternate" hreflang="tl" href="https://toolnestonline.netlify.app/ph/">
+  <link rel="alternate" hreflang="ja" href="https://toolnestonline.netlify.app/jp/">
+  <link rel="alternate" hreflang="ru" href="https://toolnestonline.netlify.app/ru/">
+  <link rel="alternate" hreflang="es-ES" href="https://toolnestonline.netlify.app/es/">
+  <link rel="alternate" hreflang="vi" href="https://toolnestonline.netlify.app/vn/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Công Cụ Online Miễn Phí Việt Nam – ToolNest">
+  <meta property="og:description"
+    content="Gộp file PDF, nén ảnh, chuyển ảnh sang PNG và đếm từ online trực tiếp trên trình duyệt không cần tải file lên máy chủ.">
+  <meta property="og:url" content="https://toolnestonline.netlify.app/vn/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <!-- Theme early-init -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('toolnest_theme');
+        var p = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var t = s || (p ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <!-- JSON-LD Structured Data: WebApplication + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "ToolNest Việt Nam – Công Cụ Online Miễn Phí",
+        "url": "https://toolnestonline.netlify.app/vn/",
+        "description": "Bộ tiện ích trực tuyến miễn phí xử lý trực tiếp trên trình duyệt: gộp file PDF, nén dung lượng ảnh, chuyển đổi ảnh và đếm từ văn bản.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Yêu cầu trình duyệt có hỗ trợ JavaScript và HTML5",
+        "inLanguage": "vi",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "VND"
+        },
+        "featureList": [
+          "Gộp file PDF và tách trang PDF trực tuyến",
+          "Nén file PDF và giảm dung lượng tệp",
+          "Giảm dung lượng ảnh và nén ảnh theo KB",
+          "Chuyển ảnh sang PNG và chuyển file ảnh sang PDF",
+          "Thay đổi kích thước ảnh và cắt ảnh online",
+          "Đếm từ online và đếm ký tự văn bản thời gian thực",
+          "Chuyển chữ hoa thành chữ thường và xóa khoảng trắng thừa"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Các công cụ trên ToolNest có hoàn toàn miễn phí không?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Có, tất cả công cụ trên ToolNest đều miễn phí 100%, không giới hạn số lần sử dụng, không thu phí ẩn và không yêu cầu đăng ký tài khoản hay thẻ tín dụng."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tệp PDF và hình ảnh của tôi có bị tải lên máy chủ không?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Không. Mọi tác vụ xử lý ảnh, tài liệu PDF và văn bản đều diễn ra cục bộ trực tiếp trên trình duyệt của bạn (client-side). Tệp của bạn hoàn toàn không bị gửi lên internet, bảo đảm an toàn dữ liệu 100%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tôi có thể sử dụng ToolNest trên điện thoại di động không?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Có. ToolNest được thiết kế tối ưu mượt mà cho điện thoại thông minh Android và iPhone, thao tác trực tiếp qua Chrome hoặc Safari mà không cần cài đặt ứng dụng."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M14 16 L24 10 L34 16 L34 32 L24 38 L14 32 Z" />
+          </svg>
+        </span>
+        <span class="brand-text">Tool<span>Nest</span></span>
+      </a>
+
+      <nav aria-label="Điều hướng chính">
+        <ul class="nav-links">
+          <li><a href="../index.html">Global</a></li>
+          <li><a href="#pdf-tools" class="active">Công Cụ PDF</a></li>
+          <li><a href="#image-tools">Công Cụ Ảnh</a></li>
+          <li><a href="#text-tools">Công Cụ Văn Bản</a></li>
+          <li><a href="#faq">Hỏi Đáp</a></li>
+          <li><a href="../about.html">Giới Thiệu</a></li>
+          <li><a href="../contact.html">Liên Hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- International Language / Region Selector -->
+        <div class="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Chọn quốc gia / ngôn ngữ" aria-expanded="false">
+            <span class="lang-flag">🇻🇳</span>
+            <span>Việt Nam</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-dropdown-menu" role="menu">
+            <div class="lang-menu-header">Khu vực quốc tế</div>
+            <a href="../index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🌐</span> Global (English)</span><span class="lang-code">en</span></a>
+            <a href="../br/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇧🇷</span> Brasil (Português)</span><span class="lang-code">pt-BR</span></a>
+            <a href="../id/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇮🇩</span> Indonesia (Bahasa)</span><span class="lang-code">id</span></a>
+            <a href="../de/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇩🇪</span> Deutschland (Deutsch)</span><span class="lang-code">de</span></a>
+            <a href="../mx/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇲🇽</span> México (Español)</span><span class="lang-code">es-MX</span></a>
+            <a href="../fr/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇫🇷</span> France (Français)</span><span class="lang-code">fr</span></a>
+            <a href="../ph/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇵🇭</span> Philippines (Tagalog)</span><span class="lang-code">en-PH</span></a>
+            <a href="../jp/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇯🇵</span> 日本 (日本語)</span><span class="lang-code">ja</span></a>
+            <a href="../ru/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇷🇺</span> Россия (Русский)</span><span class="lang-code">ru</span></a>
+            <a href="../es/index.html" class="lang-option" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇪🇸</span> España (Español)</span><span class="lang-code">es-ES</span></a>
+            <a href="index.html" class="lang-option active" role="menuitem"><span class="lang-option-left"><span class="lang-flag">🇻🇳</span> Việt Nam (Tiếng Việt)</span><span class="lang-code">vi</span></a>
+          </div>
+        </div>
+
+        <button type="button" class="theme-toggle-btn" aria-label="Chuyển chế độ sáng/tối">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button type="button" class="mobile-menu-toggle" aria-label="Mở menu di động" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-backdrop"></div>
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Menu Di Động">
+    <ul class="mobile-links">
+      <li><a href="../index.html">Global English</a></li>
+      <li><a href="#pdf-tools" class="active">Công Cụ PDF</a></li>
+      <li><a href="#image-tools">Công Cụ Ảnh</a></li>
+      <li><a href="#text-tools">Công Cụ Văn Bản</a></li>
+      <li><a href="#faq">Câu Hỏi Thường Gặp</a></li>
+      <li><a href="../about.html">Về Chúng Tôi</a></li>
+      <li><a href="../contact.html">Liên Hệ</a></li>
+    </ul>
+  </div>
+
+  <main class="main-content">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="../index.html">Trang chủ</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Việt Nam (vi)</span>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="region-hero-pill">
+          <span>🇻🇳</span> Phiên bản Việt Nam &bull; Tiếng Việt
+        </div>
+        <h1 class="hero-title">Bộ Công Cụ Online Miễn Phí Xử Lý PDF, Ảnh & Văn Bản</h1>
+        <p class="hero-subtitle">
+          Gộp file PDF, nén file PDF, giảm dung lượng ảnh, chuyển ảnh sang PNG và đếm từ online nhanh chóng, bảo mật tuyệt đối trực tiếp trên trình duyệt.
+        </p>
+      </div>
+    </section>
+
+    <!-- Category 1: PDF Tools (10 Keywords) -->
+    <section id="pdf-tools" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Tài liệu PDF</span>
+          <h2 class="section-title">Công Cụ PDF</h2>
+          <p class="section-subtitle">Xử lý, gộp, nén và chia nhỏ tài liệu PDF ngay trên trình duyệt mà không cần tải phần mềm.</p>
+        </div>
+
+        <div class="keyword-tools-grid">
+          <!-- 1. gộp file pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="16" height="18" x="4" y="4" rx="2"/><path d="M4 10h16"/><path d="M10 14h4"/></svg>
+              </div>
+              <span class="keyword-card-badge">PDF</span>
+            </div>
+            <h3 class="keyword-card-title">Gộp File PDF</h3>
+            <p class="keyword-card-desc">Ghép nhiều tệp PDF lại thành một file hoàn chỉnh duy nhất theo đúng thứ tự bạn muốn.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 2. nén file pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 3-3 3 3"/><path d="M12 12v6"/></svg>
+              </div>
+              <span class="keyword-card-badge">Dung lượng</span>
+            </div>
+            <h3 class="keyword-card-title">Nén File PDF</h3>
+            <p class="keyword-card-desc">Giảm dung lượng tệp PDF nhanh chóng để dễ dàng đính kèm gửi qua email hay Zalo.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-compressor.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 3. chuyển pdf sang word -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+              </div>
+              <span class="keyword-card-badge">Chuyển đổi</span>
+            </div>
+            <h3 class="keyword-card-title">Chuyển PDF Sang Word</h3>
+            <p class="keyword-card-desc">Trích xuất nội dung và trang tài liệu PDF để dễ dàng chỉnh sửa văn bản thuận tiện.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-to-jpg.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 4. tách trang pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="16" y1="3" x2="16" y2="21"/><line x1="8" y1="3" x2="8" y2="21"/><rect width="20" height="18" x="2" y="3" rx="2"/></svg>
+              </div>
+              <span class="keyword-card-badge">Tách file</span>
+            </div>
+            <h3 class="keyword-card-title">Tách Trang PDF</h3>
+            <p class="keyword-card-desc">Tách các trang riêng lẻ hoặc trích xuất một khoảng trang nhất định từ tệp PDF lớn.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 5. chỉnh sửa pdf miễn phí -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              </div>
+              <span class="keyword-card-badge">Chỉnh sửa</span>
+            </div>
+            <h3 class="keyword-card-title">Chỉnh Sửa PDF Miễn Phí</h3>
+            <p class="keyword-card-desc">Sắp xếp lại thứ tự các trang và cấu trúc tài liệu PDF trực tuyến hoàn toàn miễn phí.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 6. ký file pdf online -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+              </div>
+              <span class="keyword-card-badge">Ký số</span>
+            </div>
+            <h3 class="keyword-card-title">Ký File PDF Online</h3>
+            <p class="keyword-card-desc">Chuẩn bị tài liệu và hợp đồng số an toàn, bảo mật dữ liệu riêng tư tại máy tính của bạn.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 7. mở khóa file pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+              </div>
+              <span class="keyword-card-badge">Mở khóa</span>
+            </div>
+            <h3 class="keyword-card-title">Mở Khóa File PDF</h3>
+            <p class="keyword-card-desc">Tối ưu hóa và mở khóa cấu trúc tệp PDF bị hạn chế để thuận tiện cho việc đọc và in ấn.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-compressor.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 8. chuyển file ảnh sang pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+              </div>
+              <span class="keyword-card-badge">Ảnh sang PDF</span>
+            </div>
+            <h3 class="keyword-card-title">Chuyển File Ảnh Sang PDF</h3>
+            <p class="keyword-card-desc">Ghép các file ảnh JPG, PNG thành một tệp PDF chuyên nghiệp, rõ nét từng trang.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/jpg-to-pdf.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 9. xoay file pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
+              </div>
+              <span class="keyword-card-badge">Xoay trang</span>
+            </div>
+            <h3 class="keyword-card-title">Xoay File PDF</h3>
+            <p class="keyword-card-desc">Xoay hướng các trang tài liệu bị ngược hoặc nằm ngang 90 độ, 180 độ chỉ với 1 cú click.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 10. xóa trang trong pdf -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </div>
+              <span class="keyword-card-badge">Xóa trang</span>
+            </div>
+            <h3 class="keyword-card-title">Xóa Trang Trong PDF</h3>
+            <p class="keyword-card-desc">Bỏ đi những trang trắng hoặc thông tin không mong muốn khỏi tập tài liệu PDF của bạn.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/pdf-merger.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 2: Image Tools (10 Keywords) -->
+    <section id="image-tools" class="section" style="background-color: var(--bg-tertiary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Hình ảnh & Đồ họa</span>
+          <h2 class="section-title">Công Cụ Ảnh</h2>
+          <p class="section-subtitle">Nén dung lượng, đổi kích thước, tách nền và chuyển đổi định dạng ảnh nhanh chóng.</p>
+        </div>
+
+        <div class="keyword-tools-grid">
+          <!-- 1. xóa nền ảnh online -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 14.14 14.14"/></svg>
+              </div>
+              <span class="keyword-card-badge">Tách nền</span>
+            </div>
+            <h3 class="keyword-card-title">Xóa Nền Ảnh Online</h3>
+            <p class="keyword-card-desc">Tạo nền trong suốt cho hình ảnh sản phẩm và logo bằng cách chuyển sang định dạng PNG.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/png-to-jpg.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 2. giảm dung lượng ảnh -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg>
+              </div>
+              <span class="keyword-card-badge">Nén ảnh</span>
+            </div>
+            <h3 class="keyword-card-title">Giảm Dung Lượng Ảnh</h3>
+            <p class="keyword-card-desc">Hạ dung lượng KB của file JPG, PNG, WebP mà không làm mờ hay vỡ nét hình ảnh.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-compressor.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 3. chuyển ảnh sang png -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+              </div>
+              <span class="keyword-card-badge">Định dạng</span>
+            </div>
+            <h3 class="keyword-card-title">Chuyển Ảnh Sang PNG</h3>
+            <p class="keyword-card-desc">Chuyển đổi hình ảnh JPG thành định dạng PNG chất lượng cao không lo bị mờ nhòe.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/jpg-to-png.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 4. thay đổi kích thước ảnh -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
+              </div>
+              <span class="keyword-card-badge">Kích thước</span>
+            </div>
+            <h3 class="keyword-card-title">Thay Đổi Kích Thước Ảnh</h3>
+            <p class="keyword-card-desc">Tùy chỉnh chiều rộng và chiều cao theo pixel hoặc tỷ lệ cho ảnh thẻ 3x4, 4x6 hay bài đăng mạng xã hội.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-resizer.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 5. làm nét ảnh -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="keyword-card-badge">Độ nét</span>
+            </div>
+            <h3 class="keyword-card-title">Làm Nét Ảnh</h3>
+            <p class="keyword-card-desc">Cải thiện độ tương phản và độ sắc nét cho hình ảnh hiển thị rõ ràng hơn.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-resizer.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 6. làm rõ ảnh bị mờ -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <span class="keyword-card-badge">Chất lượng</span>
+            </div>
+            <h3 class="keyword-card-title">Làm Rõ Ảnh Bị Mờ</h3>
+            <p class="keyword-card-desc">Tăng cường chi tiết và giải quyết tình trạng nhòe ảnh trực tiếp ngay trên trình duyệt.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-resizer.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 7. cắt ảnh online -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg>
+              </div>
+              <span class="keyword-card-badge">Cắt ảnh</span>
+            </div>
+            <h3 class="keyword-card-title">Cắt Ảnh Online</h3>
+            <p class="keyword-card-desc">Cắt cúp ảnh theo tỷ lệ 1:1, 4:3, 16:9 hoặc tự do điều chỉnh khung hình mong muốn.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-cropper.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 8. chuyển đổi webp sang jpg -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m3 16 5-5c.928-.893 2.072-.893 3 0l5 5"/><path d="m14 14 1-1c.928-.893 2.072-.893 3 0l3 3"/></svg>
+              </div>
+              <span class="keyword-card-badge">WebP sang JPG</span>
+            </div>
+            <h3 class="keyword-card-title">Chuyển Đổi WebP Sang JPG</h3>
+            <p class="keyword-card-desc">Đổi file ảnh WebP trên mạng thành tệp JPG phổ biến để dễ mở trên mọi ứng dụng.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/png-to-jpg.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 9. tách nền ảnh thẻ -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/></svg>
+              </div>
+              <span class="keyword-card-badge">Ảnh thẻ</span>
+            </div>
+            <h3 class="keyword-card-title">Tách Nền Ảnh Thẻ</h3>
+            <p class="keyword-card-desc">Đổi phông nền trắng, xanh hoặc trong suốt cho ảnh thẻ hồ sơ xin việc, hộ chiếu.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/png-to-jpg.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 10. chỉnh dung lượng ảnh theo kb -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 3 3 3-3"/><path d="M12 9v6"/></svg>
+              </div>
+              <span class="keyword-card-badge">Mục tiêu KB</span>
+            </div>
+            <h3 class="keyword-card-title">Chỉnh Dung Lượng Ảnh Theo KB</h3>
+            <p class="keyword-card-desc">Chủ động nén ảnh về dưới 100KB, 200KB chuẩn theo yêu cầu cổng nộp hồ sơ công trực tuyến.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/image-compressor.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 3: Text Tools (10 Keywords) -->
+    <section id="text-tools" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Văn bản & Biên tập</span>
+          <h2 class="section-title">Công Cụ Văn Bản</h2>
+          <p class="section-subtitle">Đếm từ, chuyển đổi hoa/thường, xóa khoảng trắng và kiểm tra nội dung bài viết.</p>
+        </div>
+
+        <div class="keyword-tools-grid">
+          <!-- 1. đếm từ online -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+              </div>
+              <span class="keyword-card-badge">Số từ</span>
+            </div>
+            <h3 class="keyword-card-title">Đếm Từ Online</h3>
+            <p class="keyword-card-desc">Đếm số từ, số câu, đoạn văn và tính toán thời gian đọc bài viết ngay khi bạn nhập văn bản.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 2. đếm ký tự văn bản -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <span class="keyword-card-badge">Ký tự</span>
+            </div>
+            <h3 class="keyword-card-title">Đếm Ký Tự Văn Bản</h3>
+            <p class="keyword-card-desc">Kiểm tra chính xác số lượng ký tự có tính khoảng trắng và không tính khoảng trắng.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 3. chuyển chữ hoa thành chữ thường -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 15 4-8 4 8"/><path d="M4.5 12h5"/><path d="M15 11v4a2 2 0 0 0 4 0v-4"/><path d="M19 15h.01"/><path d="M15 15h.01"/></svg>
+              </div>
+              <span class="keyword-card-badge">Chữ hoa/thường</span>
+            </div>
+            <h3 class="keyword-card-title">Chuyển Chữ Hoa Thành Chữ Thường</h3>
+            <p class="keyword-card-desc">Đổi nhanh văn bản sang IN HOA, in thường, Viết Hoa Đầu Câu hoặc Viết Hoa Mỗi Từ.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/case-converter.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 4. kiểm tra đạo văn -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+              </div>
+              <span class="keyword-card-badge">Đạo văn</span>
+            </div>
+            <h3 class="keyword-card-title">Kiểm Tra Đạo Văn</h3>
+            <p class="keyword-card-desc">Phát hiện các đoạn văn bị trùng lặp, câu từ lặp lại để nâng cao tính nguyên bản của bài luận.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/duplicate-line-remover.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 5. công cụ viết lại đoạn văn -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
+              <span class="keyword-card-badge">Diễn đạt</span>
+            </div>
+            <h3 class="keyword-card-title">Công Cụ Viết Lại Đoạn Văn</h3>
+            <p class="keyword-card-desc">Gợi ý cách diễn đạt và làm mới câu chữ giúp bài viết thêm lôi cuốn, mượt mà hơn.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 6. tóm tắt văn bản tự động -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="7" y2="18"/></svg>
+              </div>
+              <span class="keyword-card-badge">Tóm tắt</span>
+            </div>
+            <h3 class="keyword-card-title">Tóm Tắt Văn Bản Tự Động</h3>
+            <p class="keyword-card-desc">Rút gọn các bài báo, tài liệu dài để nắm bắt các ý chính nhanh chóng trong ít phút.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 7. kiểm tra chính tả tiếng việt -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <span class="keyword-card-badge">Chính tả</span>
+            </div>
+            <h3 class="keyword-card-title">Kiểm Tra Chính Tả Tiếng Việt</h3>
+            <p class="keyword-card-desc">Phát hiện từ sai dấu câu và lỗi chính tả phổ biến để hoàn thiện văn bản chuẩn mực.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/word-counter.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 8. đổi font chữ đẹp -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M22 22h-6l-3-7 3-7h6"/></svg>
+              </div>
+              <span class="keyword-card-badge">Font chữ</span>
+            </div>
+            <h3 class="keyword-card-title">Đổi Font Chữ Đẹp</h3>
+            <p class="keyword-card-desc">Tạo các kiểu chữ đặc biệt, ký tự độc đáo để đặt tên game hay viết tiểu sử Facebook, TikTok.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/case-converter.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 9. xóa khoảng trắng thừa -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/><circle cx="19" cy="6" r="1.5"/><circle cx="19" cy="18" r="1.5"/></svg>
+              </div>
+              <span class="keyword-card-badge">Khoảng trắng</span>
+            </div>
+            <h3 class="keyword-card-title">Xóa Khoảng Trắng Thừa</h3>
+            <p class="keyword-card-desc">Làm sạch dòng trống, dấu cách kép và loại bỏ hoàn toàn các dòng trùng lặp trong danh sách.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/duplicate-line-remover.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 10. đảo ngược chuỗi ký tự -->
+          <article class="keyword-tool-card">
+            <div class="keyword-card-header">
+              <div class="keyword-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="M14.5 4v16"/></svg>
+              </div>
+              <span class="keyword-card-badge">Đảo chuỗi</span>
+            </div>
+            <h3 class="keyword-card-title">Đảo Ngược Chuỗi Ký Tự</h3>
+            <p class="keyword-card-desc">Đảo ngược thứ tự các ký tự, từ ngữ hoặc thứ tự từng dòng văn bản từ dưới lên trên.</p>
+            <div class="keyword-card-action">
+              <a href="../tools/case-converter.html" class="btn btn-primary btn-sm">Sử dụng ngay &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (3 Localized Questions) -->
+    <section id="faq" class="section" style="background-color: var(--bg-tertiary);">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Câu Hỏi Thường Gặp</span>
+          <h2 class="section-title">Câu Hỏi Thường Gặp (FAQ)</h2>
+          <p class="section-subtitle">Tất cả những điều bạn cần biết khi sử dụng ToolNest tại Việt Nam.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Các công cụ trên ToolNest có hoàn toàn miễn phí không?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Có! Tất cả công cụ tại ToolNest đều miễn phí 100%, không giới hạn số lượt sử dụng, không yêu cầu đăng ký tài khoản hay khai báo thẻ tín dụng.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Tệp PDF và hình ảnh của tôi có bị tải lên máy chủ không?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Không. Mọi tác vụ như nén ảnh, gộp PDF hay đếm từ đều được thực thi trực tiếp trên trình duyệt (client-side) trên thiết bị của bạn. Tài liệu và hình ảnh của bạn tuyệt đối không bao giờ được gửi lên bất kỳ máy chủ từ xa nào, đảm bảo quyền riêng tư trọn vẹn.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Tôi có thể sử dụng ToolNest trên điện thoại di động không?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Có. ToolNest được tối ưu tương thích hoàn hảo với màn hình cảm ứng điện thoại chạy iOS và Android. Bạn có thể mở trực tiếp bằng Safari hoặc Chrome, tải ảnh từ thư viện và nhận file kết quả ngay tức thì.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <span class="brand-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M14 16 L24 10 L34 16 L34 32 L24 38 L14 32 Z" />
+              </svg>
+            </span>
+            <span class="brand-text">Tool<span>Nest</span></span>
+          </a>
+          <p>Bộ tiện ích trực tuyến miễn phí, nhanh chóng và bảo mật ngay trên trình duyệt. Không tải lên máy chủ.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Công Cụ Ảnh</h4>
+          <ul class="footer-links">
+            <li><a href="../tools/image-compressor.html">Giảm Dung Lượng Ảnh</a></li>
+            <li><a href="../tools/image-resizer.html">Thay Đổi Kích Thước</a></li>
+            <li><a href="../tools/jpg-to-png.html">Chuyển JPG Sang PNG</a></li>
+            <li><a href="../tools/png-to-jpg.html">Chuyển PNG Sang JPG</a></li>
+            <li><a href="../tools/image-cropper.html">Cắt Ảnh Online</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Công Cụ PDF</h4>
+          <ul class="footer-links">
+            <li><a href="../tools/pdf-merger.html">Gộp File PDF</a></li>
+            <li><a href="../tools/pdf-compressor.html">Nén File PDF</a></li>
+            <li><a href="../tools/jpg-to-pdf.html">Ảnh Sang PDF</a></li>
+            <li><a href="../tools/pdf-to-jpg.html">PDF Sang Ảnh JPG</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Văn Bản & Dev</h4>
+          <ul class="footer-links">
+            <li><a href="../tools/word-counter.html">Đếm Từ Online</a></li>
+            <li><a href="../tools/case-converter.html">Chuyển Chữ Hoa/Thường</a></li>
+            <li><a href="../tools/duplicate-line-remover.html">Xóa Dòng Trùng Lặp</a></li>
+            <li><a href="../tools/json-formatter.html">Định Dạng JSON</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Khu Vực Khác</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">🌐 Global (English)</a></li>
+            <li><a href="../id/index.html">🇮🇩 Indonesia (Bahasa)</a></li>
+            <li><a href="../ph/index.html">🇵🇭 Philippines (Tagalog)</a></li>
+            <li><a href="../jp/index.html">🇯🇵 日本 (日本語)</a></li>
+            <li><a href="../fr/index.html">🇫🇷 France (Français)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Thông Tin</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">Về Chúng Tôi</a></li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+            <li><a href="../privacy-policy.html">Chính Sách Bảo Mật</a></li>
+            <li><a href="../terms.html">Điều Khoản Sử Dụng</a></li>
+            <li><a href="../disclaimer.html">Tuyên Bố Miễn Trừ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year"></span> ToolNest Việt Nam. Bảo lưu mọi quyền.</div>
+        <div class="footer-bottom-links">
+          <a href="../privacy-policy.html">Bảo mật</a>
+          <a href="../terms.html">Điều khoản</a>
+          <a href="../sitemap.xml">Sơ đồ trang</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/config.js"></script>
+  <script src="../js/tools.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/analytics.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
