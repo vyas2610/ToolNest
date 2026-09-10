@@ -7,6 +7,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   initMobileMenu();
+  initLanguageSelector();
   initYear();
   initFaqAccordion();
   renderDynamicToolGrids();
@@ -156,6 +157,56 @@ function initMobileMenu() {
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && navDrawer.classList.contains("active")) {
       toggleMenu(false);
+    }
+  });
+}
+
+/* -------------------------------------------------------------------------- */
+/*  2b. LANGUAGE / REGION SELECTOR (Click & Keyboard Toggle)                  */
+/* -------------------------------------------------------------------------- */
+function initLanguageSelector() {
+  const selectors = document.querySelectorAll(".lang-selector");
+  selectors.forEach(selector => {
+    const btn = selector.querySelector(".lang-btn");
+    const menu = selector.querySelector(".lang-dropdown-menu");
+    if (!btn || !menu) return;
+
+    // Click on button toggles menu open state
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      const isOpen = selector.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    // Close when clicking an option
+    const options = menu.querySelectorAll(".lang-option");
+    options.forEach(opt => {
+      opt.addEventListener("click", () => {
+        selector.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+  });
+
+  // Close when clicking outside of selector
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".lang-selector")) {
+      document.querySelectorAll(".lang-selector.is-open").forEach(sel => {
+        sel.classList.remove("is-open");
+        const btn = sel.querySelector(".lang-btn");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".lang-selector.is-open").forEach(sel => {
+        sel.classList.remove("is-open");
+        const btn = sel.querySelector(".lang-btn");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      });
     }
   });
 }

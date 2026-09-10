@@ -1480,7 +1480,8 @@ textarea.form-control {
   transition: var(--transition);
 }
 
-.lang-btn:hover {
+.lang-btn:hover,
+.lang-selector.is-open .lang-btn {
   background: var(--border-color);
   color: var(--primary);
 }
@@ -1496,13 +1497,14 @@ textarea.form-control {
 }
 
 .lang-selector:hover .chevron-icon,
+.lang-selector.is-open .chevron-icon,
 .lang-selector.active .chevron-icon {
   transform: rotate(180deg);
 }
 
 .lang-dropdown-menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 4px);
   right: 0;
   width: 280px;
   background: var(--card-bg);
@@ -1517,8 +1519,20 @@ textarea.form-control {
   animation: fadeInDown 0.18s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Invisible hover bridge to eliminate gap between button and dropdown menu */
+.lang-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: transparent;
+}
+
 .lang-selector:hover .lang-dropdown-menu,
 .lang-selector:focus-within .lang-dropdown-menu,
+.lang-selector.is-open .lang-dropdown-menu,
 .lang-dropdown-menu.show {
   display: block;
 }
